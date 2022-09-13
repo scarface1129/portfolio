@@ -2,7 +2,6 @@
 include('functions.php');
 include('connection.php');
 
-session_start();
 $profile = Profile($conn);
 $profession = explode(',',$profile['profession']);
 $accounts = explode(',',$profile['social_media_accounts']);
@@ -13,12 +12,9 @@ $experience = Experience($conn);
 $skills = Skills($conn);
 $interviews = Interview($conn);
 $testimonies = Testimonies($conn);
-
-if (isset($_GET['error']))  {
-    $error = $_GET['error'];
-}
-if (isset($_GET['message']))  {
-    $message = $_GET['message'];
+if(isset($_SESSION['errors'])){
+    $errors = $_SESSION['errors'];
+    $values = $_SESSION['values'];
 }
 
 
@@ -672,32 +668,32 @@ if (isset($_GET['message']))  {
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="name">Your Name</label>
-                                            <div style="color: red;"><?= $errors['name'] ?></div>
-                                            <input style="color: white;" class="form-control form-control-lg" value='<?=$_SESSION['contact_name'] ?? ''?>' name="name" id="name" type="text">
+                                            <div style="color: red;"><?= $errors['name'] ?? '' ?></div>
+                                            <input style="color: white;" class="form-control form-control-lg" value='<?=$values['name'] ?? ''?>' name="name" id="name" type="text">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="phone">Phone Number</label>
-                                            <div style="color: red;"><?= $errors['phone'] ?></div>
-                                            <input style="color: white;" class="form-control" name="phone" value="<?=$_SESSION['contact_phone'] ?? ''?>" id="phone" type="text">
+                                            <div style="color: red;"><?= $errors['phone'] ?? '' ?></div>
+                                            <input style="color: white;" class="form-control" name="phone" value="<?=$values['phone'] ?? ''?>" id="phone" type="text">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <div style="color: red;"><?= $errors['email'] ?></div>
-                                            <input style="color: white;" class="form-control form-control-sm" value='<?=$_SESSION['contact_email'] ?? ''?>' id="email" name="email" type="email">
+                                            <div style="color: red;"><?= $errors['email'] ?? '' ?></div>
+                                            <input style="color: white;" class="form-control form-control-sm" value='<?=$values['email'] ?? ''?>' id="email" name="email" type="email">
                                         </div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="form-group">
                                             <label for="subject">subject</label>
-                                            <div style="color: red;"><?= $errors['subject'] ?></div>
-                                            <input style="color: white;" class="form-control form-control-sm" value='<?=$_SESSION['contact_subject'] ?? ''?>'  id="subject" name="subject" type="text">
+                                            <div style="color: red;"><?= $errors['subject'] ?? '' ?></div>
+                                            <input style="color: white;" class="form-control form-control-sm" value='<?=$values['subject'] ?? ''?>'  id="subject" name="subject" type="text">
                                         </div>
                                     </div>
 
@@ -705,7 +701,7 @@ if (isset($_GET['message']))  {
                                         <div class="form-group">
                                             <label for="message">Your Message</label>
                                             <div style="color: red;"><?= $errors['message'] ?></div>
-                                            <textarea name="message" style="color: white;" id="message" cols="30" rows="10"></textarea>
+                                            <textarea name="message" style="color: white;" id="message" cols="30" rows="10"><?= $values['message'] ?? ''?></textarea>
                                         </div>
                                     </div>
 
@@ -771,6 +767,11 @@ if (isset($_GET['message']))  {
             </div>
         </div>
     </div>
+
+    <?php 
+        unset($_SESSION['errors']);
+        unset($_SESSION['values']);
+    ?>
     <!-- End Footer Area -->
     <!-- JS ============================================ -->
     <script src="assets/js/vendor/jquery.js"></script>
@@ -793,6 +794,7 @@ if (isset($_GET['message']))  {
     <script src="assets/js/vendor/jquery-one-page-nav.js"></script>
     <!-- main JS -->
     <script src="assets/js/main.js"></script>
+   
 </body>
 
 

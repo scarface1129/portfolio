@@ -88,56 +88,60 @@ function Testimonies($conn){
 
 
 $errors = ['email'=> '', 'name'=> '', 'phone'=>'', 'subject' =>'', 'message'=> ''];
+$Errorcount = 0;
 if (isset($_POST['submit'])) {
-    $_SESSION['contact_email'] = $_POST['email'];
-    $_SESSION['contact_name'] = $_POST['name'];
-    $_SESSION['contact_subject'] = $_POST['subject'];
-    $_SESSION['contact_phone'] = $_POST['phone'];
-    $_SESSION['contact_message'] = $_POST['message'];
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $subject = $_POST['subject'];
+    $phone = $_POST['phone'];
+    $message = $_POST['message'];
+    $values = ['email'=>$email, 'name'=>$name, 'phone'=>$phone, 'subject'=>$subject, 'message'=>$message];
     if (empty($_POST['email'])) {
         $errors['email'] = 'Email Field Is Required';
-        header("Location: index.php?error=Email Field Is Required");
+        $Errorcount++;
     }else{
         $email = $_POST['email'];
         if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
             $errors['email'] =  "your input is not in email format See what You Entered: $email";
-            header("Location: index.php?error=your input is not in email format See what You Entered: $email");
+            $Errorcount++;
         }
     }
     if (empty($_POST['name'])) {
         $errors['name'] ='Name Field Is Required';
-        header("Location: index.php?error=Name Field Is Required");
+        $Errorcount++;
     }else{
         $name = $_POST['name'];
         if(!preg_match('/^[a-zA-Z\s]+$/',$name)){
             $errors['name'] = "The Name Field Must contain alphabets only";
-            header("Location: index.php?error=The Name Field Must contain alphabets only");
+            $Errorcount++;
         }
     }
     if (empty($_POST['subject'])) {
         $errors['subject'] = 'subject Field Is Required';
-        header("Location: index.php?error=subject Field Is Required");
-    }else{
-        $subject = $_POST['subject'];
+        $Errorcount++;
     }
     if (empty($_POST['message'])) {
         $errors['message'] = 'message Field Is Required';
-        header("Location: index.php?error=message Field Is Required");
-    }else{
-        $message = $_POST['message'];
+        $Errorcount++;
     }
         if(empty($_POST['phone'])){
             $errors['phone'] = '';
         }else{
-            $phone = $_POST['phone'];
             if(!preg_match('/((^090)([23589]))|((^070)([1-9]))|((^080)([2-9]))|((^081)([0-9]))(\d{7})/',$phone)){
                 $errors['phone'] = "Enter a Valid phone Number";
-                header("Location: index.php?error=Enter a Valid phone Number");
             }
         }
-
+        // print_r($errors);
+        // echo($Errorcount);
+        // die();
+        if ($Errorcount > 0){
+            $_SESSION['errors'] = $errors;
+            $_SESSION['values'] = $values;
+            header("Location: index.php#contacts");
+        }
+    
         $header = $email;
-        $to = $profile[0]['email'];
+        $to = $Profile($conn)['email'];
 
             if(mail($to, $subject, $message, $header)){
                 header("Location: index.php?message=Mail sent successful");
@@ -146,15 +150,7 @@ if (isset($_POST['submit'])) {
                 header("Location: index.php?error=Mail-not-sent");
                 exit();
             }
-    }else{
-        $_SESSION['contact_email'] = '';
-        $_SESSION['contact_name'] = '';
-        $_SESSION['contact_subject'] = '';
-        $_SESSION['contact_phone'] = '';
-        $_SESSION['contact_message'] = '';
-    }
-
-    
+    }    
 ?>
 
 
