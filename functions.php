@@ -1,76 +1,94 @@
 <?php
 include('connection.php');
-
-$sql = "SELECT * FROM `profile`";
-$result = mysqli_query($conn, $sql);
-$profile = mysqli_fetch_all($result, MYSQLI_ASSOC);
-mysqli_free_result($result);
-
-$item = $profile[0]['profession'];
-$items = explode(',',$item);
-
-$social_accounts = $profile[0]['social_media_accounts'];
-$accounts = explode(',',$social_accounts);
-$facebook = $accounts[0];
-$instagram = $accounts[1];
-$linkln = $accounts[2];
-// print_r($profile);
-// die();
-
-$sql = "SELECT * FROM `projects`";
-$result = mysqli_query($conn, $sql);
-$project = mysqli_fetch_all($result, MYSQLI_ASSOC);
-mysqli_free_result($result);
-$projects = $project;
-// print_r($project);
-// die();
+session_start();
 
 
-$sql = "SELECT * FROM `education`";
-$result = mysqli_query($conn, $sql);
-$educations = mysqli_fetch_all($result, MYSQLI_ASSOC);
-mysqli_free_result($result);
-// print_r($educations);
-// die();
+function Profile($conn) {
+    $sql = "SELECT * FROM `profile`";
+    $result = mysqli_query($conn, $sql);
+    $profile = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    if($profile){
+        return $profile[0];
+    }else{
+        return null;
+    }
+    return $profile[0];
+    exit;
+}
 
+function Projects($conn){
+    $sql = "SELECT * FROM `projects`";
+    $result = mysqli_query($conn, $sql);
+    $project = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    if ($project){
+        return $project;
+    }else{
+        return null;
+    }
+}
 
-$sql = "SELECT * FROM `experience`";
-$result = mysqli_query($conn, $sql);
-$experience = mysqli_fetch_all($result, MYSQLI_ASSOC);
-mysqli_free_result($result);
-// print_r($experience);
-// die();
+function Education($conn){
+    $sql = "SELECT * FROM `education`";
+    $result = mysqli_query($conn, $sql);
+    $education = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    if ($education){
+        return $education;
+    }else{
+        return null;
+    }
+}
 
-$sql = "SELECT * FROM `professional_skills`";
-$result = mysqli_query($conn, $sql);
-$skills = mysqli_fetch_all($result, MYSQLI_ASSOC);
-mysqli_free_result($result);
-// print_r($skills);
-// die();
+function Experience($conn){
+    $sql = "SELECT * FROM `experience`";
+    $result = mysqli_query($conn, $sql);
+    $experience = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    if($experience){
+        return $experience;
+    }else{
+        return null;
+    }
+}
+function Skills($conn){
+    $sql = "SELECT * FROM `professional_skills`";
+    $result = mysqli_query($conn, $sql);
+    $skills = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    if ($skills){
+        return $skills;
+    }else{
+        return null;
+    }
+}
+function Interview($conn){
+    $sql = "SELECT * FROM `interviews`";
+    $result = mysqli_query($conn, $sql);
+    $interviews = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    if ($interviews){
+        return $interviews;
+    }else{
+        return null;
+    }
+}
+function Testimonies($conn){
+    $sql = "SELECT * FROM `testimonies`";
+    $result = mysqli_query($conn, $sql);
+    $testimonies = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_free_result($result);
+    if ($testimonies){
+        return $testimonies;
+    }else{
+        return null;
+    }
+}
 
-$sql = "SELECT * FROM `interviews`";
-$result = mysqli_query($conn, $sql);
-$interviews = mysqli_fetch_all($result, MYSQLI_ASSOC);
-mysqli_free_result($result);
-// print_r($interviews);
-// die();
-
-$sql = "SELECT * FROM `testimonies`";
-$result = mysqli_query($conn, $sql);
-$testimonies = mysqli_fetch_all($result, MYSQLI_ASSOC);
-mysqli_free_result($result);
-// print_r($testimonies);
-// die();
-
-
-$ability = $profile[0]['skills'];
-$ability = explode(',',$ability);
-// print_r($skills);
-// die();
 
 $errors = ['email'=> '', 'name'=> '', 'phone'=>'', 'subject' =>'', 'message'=> ''];
 if (isset($_POST['submit'])) {
-    session_start();
     $_SESSION['contact_email'] = $_POST['email'];
     $_SESSION['contact_name'] = $_POST['name'];
     $_SESSION['contact_subject'] = $_POST['subject'];

@@ -1,14 +1,27 @@
 <?php  
 include('functions.php');
+include('connection.php');
+
+session_start();
+$profile = Profile($conn);
+$profession = explode(',',$profile['profession']);
+$accounts = explode(',',$profile['social_media_accounts']);
+$ability = explode(',',$profile['skills']);
+$projects = Projects($conn);
+$educations = Education($conn);
+$experience = Experience($conn);
+$skills = Skills($conn);
+$interviews = Interview($conn);
+$testimonies = Testimonies($conn);
 
 if (isset($_GET['error']))  {
-session_start();
     $error = $_GET['error'];
 }
 if (isset($_GET['message']))  {
-session_start();
     $message = $_GET['message'];
 }
+
+
 ?>
 
 
@@ -16,7 +29,6 @@ session_start();
 <html lang="en">
 
 
-<!-- Mirrored from rainbowit.net/html/inbio/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 May 2022 03:39:53 GMT -->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -60,8 +72,9 @@ session_start();
             <div class="col-lg-2 col-6">
                 <div class="header-left">
                     <div class="logo">
-                        <a href="index-2.html">
-                            <img src="assets/images/logo/logo.png" alt="logo">
+                        <a href="#">
+                            <h5 style="color: black;">Agbo</h5>
+                            <!-- <img src="assets/images/logo/logo.JPG" alt="logo"> -->
                         </a>
                     </div>
                 </div>
@@ -76,12 +89,9 @@ session_start();
                         <!-- Start Mainmanu Nav -->
                         <ul class="primary-menu nav nav-pills">
                             <li class="nav-item current"><a class="nav-link" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
                             <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                             <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#clients">Clients</a></li>
-                            <!-- <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#blog">blog</a></li> -->
+                            <li class="nav-item"><a class="nav-link" href="#testimonial">Clients</a></li>
                             <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
                         </ul>
                         <!-- End Mainmanu Nav -->
@@ -110,24 +120,21 @@ session_start();
         <div class="inner">
             <div class="menu-top">
                 <div class="menu-header">
-                    <a class="logo" href="index-2.html">
-                        <img src="assets/images/logo/logos-circle.png" alt="Personal Portfolio">
+                    <a class="logo" href="#">
+                        <img src="" alt="Agbo Emmanuel">
                     </a>
                     <div class="close-button">
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
                     </div>
                 </div>
-                <p class="discription">plain text</p>
+                <p class="discription">A dedicated Software Developers</p>
             </div>
             <div class="content">
                 <ul class="primary-menu nav nav-pills onepagenav">
                     <li class="nav-item current"><a class="nav-link smoth-animation active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#features">Features</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#portfolio">Portfolio</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#resume">Resume</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#clients">Clients</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link smoth-animation" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link smoth-animation" href="#blog">blog</a></li> -->
+                    <li class="nav-item"><a class="nav-link smoth-animation" href="#testimonial">Clients</a></li>
                     <li class="nav-item"><a class="nav-link smoth-animation" href="#contacts">Contact</a></li>
                 </ul>
                 <!-- social sharea area -->
@@ -182,16 +189,15 @@ session_start();
                             <div class="content">
                                 <div class="inner">
                                     <span class="subtitle">Welcome to my world</span>
-                                    <h1 class="title">Hi, I’m <span><?= $profile[0]['name'] ?></span><br>
+                                    <h1 class="title">Hi, I’m <span><?= $profile['name'] ?></span><br>
                                         <span class="header-caption" id="page-top">
                                             <!-- type headline start-->
                                             <span class="cd-headline clip is-full-width">
                                                 <span>a </span>
                                         <!-- ROTATING TEXT -->
                                         <span class="cd-words-wrapper">
-                                                    <b class="is-visible"><?= $items[0] ?></b>
-                                                    <b class="is-hidden"><?= $items[1] ?></b>
-                                                    <b class="is-hidden"><?= $items[2] ?></b>
+                                                    <b class="is-visible"><?= $profession[0] ?></b>
+                                                    <b class="is-hidden"><?= $profession[0] ?></b>
                                                 </span>
                                         </span>
                                         <!-- type headline end -->
@@ -200,7 +206,7 @@ session_start();
 
                                     <div>
                                         <p class="description">
-                                            <?= $profile[0]['about'] ?>
+                                            <?= $profile['about'] ?>
                                         </p>
                                     </div>
                                 </div>
@@ -215,11 +221,11 @@ session_start();
                                 <div class="social-share-inner-left">
                                     <span class="title">find with me</span>
                                     <ul class="social-share d-flex liststyle">
-                                        <li class="facebook"><a href="http://<?=$facebook?>"><i data-feather="facebook"></i></a>
+                                        <li class="facebook"><a href="http://<?=$accounts[0]?>"><i data-feather="facebook"></i></a>
                                         </li>
-                                        <li class="instagram"><a href="http://<?=$instagram?>"><i data-feather="instagram"></i></a>
+                                        <li class="instagram"><a href="http://<?=$accounts[1]?>"><i data-feather="instagram"></i></a>
                                         </li>
-                                        <li class="linkedin"><a href="http://<?=$linkln?>"><i data-feather="linkedin"></i></a>
+                                        <li class="linkedin"><a href="http://<?=$accounts[2]?>"><i data-feather="linkedin"></i></a>
                                         </li>
                                     </ul>
                                 </div>
@@ -240,134 +246,7 @@ session_start();
         </div>
         <!-- End Slider Area -->
 
-        <!-- Start Service Area -->
-        <div class="rn-service-area rn-section-gap section-separator" id="features">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title text-left" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
-                            <span class="subtitle">Features</span>
-                            <h2 class="title">What I Do</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row row--25 mt_md--10 mt_sm--10">
-
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="menu"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Business Stratagy</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as I
-                                        lie close to the earth.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="book-open"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">App Development</a></h4>
-                                    <p class="description"> It uses a dictionary of over 200 Latin words, combined with
-                                        a handful of model sentence.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="tv"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">App Development</a></h4>
-                                    <p class="description">I throw myself down among the tall grass by the stream as I
-                                        lie close to the earth.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="twitch"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Mobile App</a></h4>
-                                    <p class="description">There are many variations of passages of Lorem Ipsum
-                                        available, but the majority.
-                                    </p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="300" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="wifi"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">CEO Marketing</a></h4>
-                                    <p class="description">always free from repetition,
-                                        injected humour, or non-characteristic words etc.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
-                    <!-- End SIngle Service -->
-                    <!-- Start Single Service -->
-                    <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="500" data-aos-once="true" class="col-lg-6 col-xl-4 col-md-6 col-sm-12 col-12 mt--50 mt_md--30 mt_sm--30">
-                        <div class="rn-service">
-                            <div class="inner">
-                                <div class="icon">
-                                    <i data-feather="slack"></i>
-                                </div>
-                                <div class="content">
-                                    <h4 class="title"><a href="#">Personal Portfolio April</a></h4>
-                                    <p class="description"> It uses a dictionary of over 200 Latin words, combined with
-                                        a handful of model sentence.</p>
-                                    <a class="read-more-button" href="#"><i class="feather-arrow-right"></i></a>
-                                </div>
-                            </div>
-                            <a class="over-link" href="#"></a>
-                        </div>
-                    </div>
-                    <!-- End SIngle Service -->
-
-                </div>
-            </div>
-        </div>
-        <!-- End Service Area  -->
-
+       
         <!-- Start Portfolio Area -->
         <div class="rn-portfolio-area rn-section-gap section-separator" id="portfolio">
             <div class="container">
@@ -436,7 +315,7 @@ session_start();
                                         <div class="col-lg-6">
                                             <div class="text-content">
                                                 <h3>
-                                                    <span>Featured - Design</span> <?= $project['project_spec'] ?? '' ?>
+                                                    <span>Featured - <?= $project['language_used'] ?? '' ?></span> <?= $project['project_spec'] ?? '' ?>
                                                 </h3>
                                                 <p class="mb--30"><?= $project['text'] ?? ''?></p>
                                                 <div class="button-group mt--20">
@@ -475,7 +354,7 @@ session_start();
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title text-center">
-                            <span class="subtitle"><?= $profile[0]['years-of-experience'] ?? ''?>+ Years of Experience</span>
+                            <span class="subtitle"><?= $profile['years-of-experience'] ?? ''?>+ Years of Experience</span>
                             <h2 class="title">My Resume</h2>
                         </div>
                     </div>
@@ -738,80 +617,7 @@ session_start();
         </div>
         <!-- End Testimonia Area  -->
         <!-- Start Client Area -->
-        <div class="rn-client-area rn-section-gap section-separator" id="clients">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title">
-                            <span class="subtitle">Popular Clients</span>
-                            <h2 class="title">Awesome Clients</h2>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row row--25 mt--50 mt_md--40 mt_sm--40">
-                    <div class="col-lg-4">
-                        <div class="d-flex flex-wrap align-content-start h-100">
-                            <div class="position-sticky clients-wrapper sticky-top rbt-sticky-top-adjust">
-                                <ul class="nav tab-navigation-button flex-column nav-pills me-3" id="v-pills-tab" role="tablist">
-                                    <?php if($ability): ?>
-                                    <?php foreach($ability as $skill): ?>
-                                    <li class="nav-item">
-                                        <a class="nav-link" id="v-pills-home-tab" data-bs-toggle="tab" href="#<?= $skill?>" role="tab" aria-selected="true"><?= $skill?></a>
-                                    </li>
-
-                                    <?php endforeach ?>
-                                    <?php endif ?>
-                                   
-
-
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-8">
-                        <div class="tab-area" style="width:100%; height: 100%;">
-                            <div class="d-flex align-items-start" style="width:100%; height: 100%;">
-                                <div class="tab-content" id="v-pills-tabContent" style="width:100%; height: 100%;">
-                                    <?php if($ability): ?>
-                                    <?php foreach($ability as $skill): ?>
-                                    <?php if($skill == 'Flutter'):?>
-                                    <div class="tab-pane fade active show" style="width:100%; height: 100%;"style="width:100%; height: 100%;" id="<?=$skill?>" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                    <?php else: ?>
-                                    <div class="tab-pane fade" style="width:100%; height: 100%;" id="<?=$skill?>" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                    <?php endif ?>
-                                        <div class="client-card">
-
-                                            <!-- Start Single Brand  -->
-                                            <?php if($projects):?>
-                                            <?php foreach($projects as $project):?>
-                                            <?php if($project['language_used'] == $skill):?>
-                                            <div class="main-content">
-                                                <div class="inner text-center">
-                                                    <div class="thumbnail">
-                                                        <a href="<?= $project['application_link'] ?>"><img src="assets/images/client/png/client1.png" alt="Client-image"></a>
-                                                    </div>
-                                                    <div class="seperator"></div>
-                                                    <div class="client-name"><span><span><?=$skill?></span></span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <?php endif?>
-                                            <?php endforeach?>
-                                            <?php endif ?>
-
-                                        </div>
-                                    </div>
-                                    <?php endforeach ?>
-                                    <?php endif ?>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+       
         <!-- End client section -->
         <!-- Pricing Area -->
        
@@ -838,21 +644,21 @@ session_start();
                                 <img src="assets/images/contact/contact1.png" alt="contact-img">
                             </div>
                             <div class="title-area">
-                                <h4 class="title"><?= $profile[0]['name'] ??'' ?></h4>
-                                <span>Senior Developer</span>
+                                <h4 class="title"><?= $profile['name'] ??'' ?></h4>
+                                <span>Software Developer</span>
                             </div>
                             <div class="description">
-                                <p>I am available for freelance work. Connect with me via and call in to my account.
+                                <p>I am available. Connect with me via email or call in to my account.
                                 </p>
-                                <span class="phone">Phone: <a href="tel:01941043264"><?= $profile[0]['phone_number']??'' ?></a></span>
-                                <span class="mail">Email: <a href="mailto:<?= $profile[0]['email'] ?>"><?= $profile[0]['email']??'' ?></a></span>
+                                <span class="phone">Phone: <a href="tel:01941043264"><?= $profile['phone_number']??'' ?></a></span>
+                                <span class="mail">Email: <a href="mailto:<?= $profile['email'] ?>"><?= $profile['email']??'' ?></a></span>
                             </div>
                             <div class="social-area">
                                 <div class="name">FIND WITH ME</div>
                                 <div class="social-icone">
-                                    <a href="http://<?=$facebook?>"><i data-feather="facebook"></i></a>
-                                    <a href="http://<?=$linkln?>"><i data-feather="linkedin"></i></a>
-                                    <a href="http://<?=$instagram?>"><i data-feather="instagram"></i></a>
+                                    <a href="http://<?=$accounts[0]?>"><i data-feather="facebook"></i></a>
+                                    <a href="http://<?=$accounts[1]?>"><i data-feather="linkedin"></i></a>
+                                    <a href="http://<?=$accounts[2]?>"><i data-feather="instagram"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -867,7 +673,7 @@ session_start();
                                         <div class="form-group">
                                             <label for="name">Your Name</label>
                                             <div style="color: red;"><?= $errors['name'] ?></div>
-                                            <input class="form-control form-control-lg" value='<?=$_SESSION['contact_name'] ?? ''?>' name="name" id="name" type="text">
+                                            <input style="color: white;" class="form-control form-control-lg" value='<?=$_SESSION['contact_name'] ?? ''?>' name="name" id="name" type="text">
                                         </div>
                                     </div>
 
@@ -875,7 +681,7 @@ session_start();
                                         <div class="form-group">
                                             <label for="phone">Phone Number</label>
                                             <div style="color: red;"><?= $errors['phone'] ?></div>
-                                            <input class="form-control" name="phone" value="<?=$_SESSION['contact_phone'] ?? ''?>" id="phone" type="text">
+                                            <input style="color: white;" class="form-control" name="phone" value="<?=$_SESSION['contact_phone'] ?? ''?>" id="phone" type="text">
                                         </div>
                                     </div>
 
@@ -883,7 +689,7 @@ session_start();
                                         <div class="form-group">
                                             <label for="email">Email</label>
                                             <div style="color: red;"><?= $errors['email'] ?></div>
-                                            <input class="form-control form-control-sm" value='<?=$_SESSION['contact_email'] ?? ''?>' id="email" name="email" type="email">
+                                            <input style="color: white;" class="form-control form-control-sm" value='<?=$_SESSION['contact_email'] ?? ''?>' id="email" name="email" type="email">
                                         </div>
                                     </div>
 
@@ -891,7 +697,7 @@ session_start();
                                         <div class="form-group">
                                             <label for="subject">subject</label>
                                             <div style="color: red;"><?= $errors['subject'] ?></div>
-                                            <input class="form-control form-control-sm" value='<?=$_SESSION['contact_subject'] ?? ''?>'  id="subject" name="subject" type="text">
+                                            <input style="color: white;" class="form-control form-control-sm" value='<?=$_SESSION['contact_subject'] ?? ''?>'  id="subject" name="subject" type="text">
                                         </div>
                                     </div>
 
@@ -899,7 +705,7 @@ session_start();
                                         <div class="form-group">
                                             <label for="message">Your Message</label>
                                             <div style="color: red;"><?= $errors['message'] ?></div>
-                                            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                                            <textarea name="message" style="color: white;" id="message" cols="30" rows="10"></textarea>
                                         </div>
                                     </div>
 
@@ -931,95 +737,6 @@ session_start();
                         </button>
                     </div>
 
-                    <!-- End of .modal-header -->
-
-                    <div class="modal-body">
-                        <img src="assets/images/blog/blog-big-01.jpg" alt="news modal" class="img-fluid modal-feat-img">
-                        <div class="news-details">
-                            <span class="date">2 May, 2021</span>
-                            <h2 class="title">Digital Marketo to Their New Office.</h2>
-                            <p>Nobis eleifend option congue nihil imperdiet doming id quod mazim placerat
-                                facer
-                                possim assum.
-                                Typi non
-                                habent claritatem insitam; est usus legentis in iis qui facit eorum
-                                claritatem.
-                                Investigationes
-                                demonstraverunt
-                                lectores legere me lius quod ii legunt saepius. Claritas est etiam processus
-                                dynamicus, qui
-                                sequitur
-                                mutationem consuetudium lectorum.</p>
-                            <h4>Nobis eleifend option conguenes.</h4>
-                            <p>Mauris tempor, orci id pellentesque convallis, massa mi congue eros, sed
-                                posuere
-                                massa nunc quis
-                                dui.
-                                Integer ornare varius mi, in vehicula orci scelerisque sed. Fusce a massa
-                                nisi.
-                                Curabitur sit
-                                amet
-                                suscipit nisl. Sed eget nisl laoreet, suscipit enim nec, viverra eros. Nunc
-                                imperdiet risus
-                                leo,
-                                in rutrum erat dignissim id.</p>
-                            <p>Ut rhoncus vestibulum facilisis. Duis et lorem vitae ligula cursus venenatis.
-                                Class aptent
-                                taciti sociosqu
-                                ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc vitae
-                                nisi
-                                tortor. Morbi
-                                leo
-                                nulla, posuere vel lectus a, egestas posuere lacus. Fusce eleifend hendrerit
-                                bibendum. Morbi
-                                nec
-                                efficitur ex.</p>
-                            <h4>Mauris tempor, orci id pellentesque.</h4>
-                            <p>Nulla non ligula vel nisi blandit egestas vel eget leo. Praesent fringilla
-                                dapibus dignissim.
-                                Pellentesque
-                                quis quam enim. Vestibulum ultrices, leo id suscipit efficitur, odio lorem
-                                rhoncus dolor, a
-                                facilisis
-                                neque mi ut ex. Quisque tempor urna a nisi pretium, a pretium massa
-                                tristique.
-                                Nullam in
-                                aliquam
-                                diam. Maecenas at nibh gravida, ornare eros non, commodo ligula. Sed
-                                efficitur
-                                sollicitudin
-                                auctor.
-                                Quisque nec imperdiet purus, in ornare odio. Quisque odio felis, vestibulum
-                                et.</p>
-                        </div>
-
-                        <!-- Comment Section Area Start -->
-                        <div class="comment-inner">
-                            <h3 class="title mb--40 mt--50">Leave a Reply</h3>
-                            <form action="#">
-                                <div class="row">
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group"><input type="text" placeholder="Name">
-                                        </div>
-                                        <div class="rnform-group"><input type="email" placeholder="Email">
-                                        </div>
-                                        <div class="rnform-group"><input type="text" placeholder="Website">
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6 col-md-12 col-12">
-                                        <div class="rnform-group">
-                                            <textarea placeholder="Comment"></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12">
-                                        <a class="rn-btn" href="#"><span>SUBMIT NOW</span></a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Comment Section End -->
-                    </div>
-                    <!-- End of .modal-body -->
                 </div>
             </div>
         </div>
@@ -1043,12 +760,12 @@ session_start();
                     <div class="footer-area text-center">
 
                         <div class="logo">
-                            <a href="index-2.html">
+                            <a href="#">
                                 <img src="assets/images/logo/logo-vertical.png" alt="logo">
                             </a>
                         </div>
 
-                        <p class="description mt--30">© 2022. All rights reserved by <a target="_blank" href="">Agbo Stephen Chinaza.</a></p>
+                        <p class="description mt--30">© 2022. All rights reserved by <a target="_blank" href="">Agbo Emmannuel ThankGod.</a></p>
                     </div>
                 </div>
             </div>
@@ -1079,5 +796,4 @@ session_start();
 </body>
 
 
-<!-- Mirrored from rainbowit.net/html/inbio/ by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 17 May 2022 03:41:05 GMT -->
 </html>

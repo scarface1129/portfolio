@@ -44,13 +44,13 @@
   --color-tertiary: #0d1013;
   --color-gray: #f6f6f6;
   --color-subtitle: #f26524;
-  --background-color-1: #f9f9f9;
+  --background-color-1: #f9;
   --background-color-2: #f9f9f9;
   /* --shadow-1: 10px 10px 19px #525355,
         -10px -10px 19px #525355; */
-        --shadow-1:  -9.1159px -18.2318px 24.3091px #fff, 9.1159px 18.2318px 24.3091px #eceef1;
+        --shadow-1:  -2.1159px -2.2318px 6.3091px #fff, 2.1159px 2.2318px 6.3091px #eceef1;
   /* --shadow-2: inset 21px 21px 19px #525355, inset -21px -21px 19px #525355; */
-  --shadow-2:  -9.1159px -18.2318px 24.3091px #fff, 9.1159px 18.2318px 24.3091px #eceef1;
+  --shadow-2:  -2.1159px -2.2318px 6.3091px #fff, 2.1159px 2.2318px 6.3091px #eceef1;
   --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
   --shadow-white-3: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
   --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff);
@@ -8256,10 +8256,10 @@ body.template-color-1 {
         color: var(--color-white); }
     .mainmenu-nav .primary-menu li.current a {
       opacity: 1 !important;
-      color: var(--color-white); }
+      color: var(--color-subtitle); }
   .mainmenu-nav .primary-menu:hover li a {
     opacity: 0.5; }
-
+    
 .header--sticky.sticky .mainmenu-nav .primary-menu li a {
   opacity: 0.5; }
 
