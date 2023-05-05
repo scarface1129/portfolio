@@ -33,7 +33,7 @@ if(isset($_SESSION['errors'])){
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/logo/logo1.JPG">
     <!-- CSS 
     ============================================ -->
     <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
@@ -117,7 +117,8 @@ if(isset($_SESSION['errors'])){
             <div class="menu-top">
                 <div class="menu-header">
                     <a class="logo" href="#">
-                        <img src="" alt="Agbo Emmanuel">
+                        Agbo Emmanuel
+                        <!-- <img src="" alt="Agbo Emmanuel"> -->
                     </a>
                     <div class="close-button">
                         <button class="close-menu-activation close"><i data-feather="x"></i></button>
@@ -193,7 +194,7 @@ if(isset($_SESSION['errors'])){
                                         <!-- ROTATING TEXT -->
                                         <span class="cd-words-wrapper">
                                                     <b class="is-visible"><?= $profession[0] ?></b>
-                                                    <b class="is-hidden"><?= $profession[0] ?></b>
+                                                    <b class="is-hidden"><?= $profession[1] ?></b>
                                                 </span>
                                         </span>
                                         <!-- type headline end -->
@@ -265,7 +266,7 @@ if(isset($_SESSION['errors'])){
                                 <div class="inner">
                                     <div class="thumbnail">
                                         <a href="javascript:void(0)">
-                                            <img src="assets/images/portfolio/portfolio-01.jpg" alt="Personal Portfolio Images">
+                                            <img src="assets/images/portfolio/<?= $project['image'] ?? ''?>" alt="Personal Portfolio Images">
                                         </a>
                                     </div>
                                     <div class="content">
