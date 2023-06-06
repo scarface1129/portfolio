@@ -190,11 +190,12 @@ if(isset($_SESSION['errors'])){
                                         <span class="header-caption" id="page-top">
                                             <!-- type headline start-->
                                             <span class="cd-headline clip is-full-width">
-                                                <span>a </span>
+                                                <span style="font-size: 30px;">a </span>
                                         <!-- ROTATING TEXT -->
                                         <span class="cd-words-wrapper">
-                                                    <b class="is-visible"><?= $profession[0] ?></b>
-                                                    <b class="is-hidden"><?= $profession[1] ?></b>
+                                                    <b class="is-visible" style="font-size: 30px;"><?= $profession[0] ?></b>
+                                                    <b class="is-hidden" style="font-size: 30px;"><?= $profession[1] ?></b>
+                                                    <b class="is-hidden" style="font-size: 30px;"><?= $profession[2] ?></b>
                                                 </span>
                                         </span>
                                         <!-- type headline end -->
@@ -213,31 +214,31 @@ if(isset($_SESSION['errors'])){
                         
                         
                     </div>
-                    <div class="row">
-                            <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
-                                <div class="social-share-inner-left">
-                                    <span class="title">find with me</span>
-                                    <ul class="social-share d-flex liststyle">
-                                        <li class="facebook"><a href="http://<?=$accounts[0]?>"><i data-feather="facebook"></i></a>
-                                        </li>
-                                        <li class="instagram"><a href="http://<?=$accounts[1]?>"><i data-feather="instagram"></i></a>
-                                        </li>
-                                        <li class="linkedin"><a href="http://<?=$accounts[2]?>"><i data-feather="linkedin"></i></a>
-                                        </li>
-                                    </ul>
+                        <!-- <div class="row">
+                                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
+                                    <div class="social-share-inner-left">
+                                        <span class="title">find with me</span>
+                                        <ul class="social-share d-flex liststyle">
+                                            <li class="facebook"><a href="http://<?=$accounts[0]?>"><i data-feather="facebook"></i></a>
+                                            </li>
+                                            <li class="instagram"><a href="http://<?=$accounts[1]?>"><i data-feather="instagram"></i></a>
+                                            </li>
+                                            <li class="linkedin"><a href="http://<?=$accounts[2]?>"><i data-feather="linkedin"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12 mt_mobile--30">
-                                <div class="skill-share-inner">
-                                    <span class="title">best skill on</span>
-                                    <ul class="skill-share d-flex liststyle">
-                                        <li><img src="assets/images/icons/icons-01.png" alt="Icons Images"></li>
-                                        <li><img src="assets/images/icons/icons-02.png" alt="Icons Images"></li>
-                                        <li><img src="assets/images/icons/icons-03.png" alt="Icons Images"></li>
-                                    </ul>
+                                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12 mt_mobile--30">
+                                    <div class="skill-share-inner">
+                                        <span class="title">best skill on</span>
+                                        <ul class="skill-share d-flex liststyle">
+                                            <li><img src="assets/images/icons/icons-01.png" alt="Icons Images"></li>
+                                            <li><img src="assets/images/icons/icons-02.png" alt="Icons Images"></li>
+                                            <li><img src="assets/images/icons/icons-03.png" alt="Icons Images"></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div> -->
                 </div>
             </div>
         </div>
@@ -276,7 +277,7 @@ if(isset($_SESSION['errors'])){
                                             </div>
                                             <div class="meta">
                                                 <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                                            600</span>
+                                            </span>
                                             </div>
                                         </div>
                                         <h4 class="title"><a href="javascript:void(0)"><?= $project['title'] ?? ''?> <i
@@ -304,7 +305,7 @@ if(isset($_SESSION['errors'])){
                                         <div class="col-lg-6">
                                             <div class="portfolio-popup-thumbnail">
                                                 <div class="image">
-                                                    <img class="w-100" src="assets/images/portfolio/portfolio-04.jpg" alt="slide">
+                                                    <img class="w-100" src="assets/images/portfolio/<?= $project['image'] ?? ''?>" alt="slide">
                                                 </div>
                                             </div>
                                         </div>
@@ -317,10 +318,14 @@ if(isset($_SESSION['errors'])){
                                                 <p class="mb--30"><?= $project['text'] ?? ''?></p>
                                                 <div class="button-group mt--20">
                                                     <a href="#" class="rn-btn thumbs-icon">
-                                                        <span>LIKE THIS</span>
-                                                        <i data-feather="thumbs-up"></i>
+                                                        <?php if ($project['hosted']) { ?>
+                                                            <div class="mydiv">Hosted Online</div>
+                                                        <?php } else { ?>
+                                                            <div class="myotherdiv">Personal Project</div>
+                                                        <?php } ?>
+                                                        <!-- <i data-feather="thumbs-up"></i> -->
                                                     </a>
-                                                    <a href="<?= $project['application_link'] ?? ''?>" class="rn-btn">
+                                                    <a href="<?= $project['application_link'] ?? ''?>" class="rn-btn" target="_blank">
                                                         <span>VIEW PROJECT</span>
                                                         <i data-feather="chevron-right"></i>
                                                     </a>
@@ -574,7 +579,7 @@ if(isset($_SESSION['errors'])){
                                         
                                         <?php endif ?>
                                         <div class="card-thumbnail">
-                                            <img src="assets/images/testimonial/final-home--1st.png" alt="Testimonial-image">
+                                            <img src="assets/images/testimonial/fav1.png" alt="Testimonial-image">
                                         </div>
                                         <div class="card-content">
                                             <span class="subtitle mt--10"><?= $testimony['name_of_project'] ?? '' ?></span>
