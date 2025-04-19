@@ -1,640 +1,568 @@
-<html
-  lang="en"
-  class="sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers"
->
-  <div
-    id="in-page-channel-node-id"
-    data-channel-name="in_page_channel_rEOFAP"
-  ></div>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Personal Portfolio</title>
-    <meta name="robots" content="noindex, follow" />
-    <meta name="description" content="" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Favicon -->
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="public/images/logo/logo1.JPG"
-    />
-    <!-- CSS 
+<html lang="en"
+  class="sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers">
+<div id="in-page-channel-node-id" data-channel-name="in_page_channel_rEOFAP"></div>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>Personal Portfolio</title>
+  <meta name="robots" content="noindex, follow" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="public/images/logo/logo1.JPG" />
+  <!-- CSS 
     ============================================ -->
-    <link rel="stylesheet" href="public/css/vendor/bootstrap.min.css" />
-    <link rel="stylesheet" href="public/css/vendor/slick.css" />
-    <link rel="stylesheet" href="public/css/vendor/slick-theme.css" />
-    <link rel="stylesheet" href="public/css/vendor/aos.css" />
-    <link rel="stylesheet" href="public/css/plugins/feature.css" />
-    <!-- Style css -->
-    <link rel="stylesheet" href="public/css/style.css" />
-    <style type="text/css">
-      .lf-progress {
-        -webkit-appearance: none;
-        -moz-apperance: none;
-        width: 100%;
-        /* margin: 0 10px; */
-        height: 4px;
-        border-radius: 3px;
-        cursor: pointer;
-      }
-      .lf-progress:focus {
-        outline: none;
-        border: none;
-      }
-      .lf-progress::-moz-range-track {
-        cursor: pointer;
-        background: none;
-        border: none;
-        outline: none;
-      }
-      .lf-progress::-webkit-slider-thumb {
-        -webkit-appearance: none !important;
-        height: 13px;
-        width: 13px;
-        border: 0;
-        border-radius: 50%;
-        background: #0fccce;
-        cursor: pointer;
-      }
-      .lf-progress::-moz-range-thumb {
-        -moz-appearance: none !important;
-        height: 13px;
-        width: 13px;
-        border: 0;
-        border-radius: 50%;
-        background: #0fccce;
-        cursor: pointer;
-      }
-      .lf-progress::-ms-track {
-        width: 100%;
-        height: 3px;
-        cursor: pointer;
-        background: transparent;
-        border-color: transparent;
-        color: transparent;
-      }
-      .lf-progress::-ms-fill-lower {
-        background: #ccc;
-        border-radius: 3px;
-      }
-      .lf-progress::-ms-fill-upper {
-        background: #ccc;
-        border-radius: 3px;
-      }
-      .lf-progress::-ms-thumb {
-        border: 0;
-        height: 15px;
-        width: 15px;
-        border-radius: 50%;
-        background: #0fccce;
-        cursor: pointer;
-      }
-      .lf-progress:focus::-ms-fill-lower {
-        background: #ccc;
-      }
-      .lf-progress:focus::-ms-fill-upper {
-        background: #ccc;
-      }
-      .lf-player-container :focus {
-        outline: 0;
-      }
-      .lf-popover {
-        position: relative;
-      }
+  <link rel="stylesheet" href="public/css/vendor/bootstrap.min.css" />
+  <link rel="stylesheet" href="public/css/vendor/slick.css" />
+  <link rel="stylesheet" href="public/css/vendor/slick-theme.css" />
+  <link rel="stylesheet" href="public/css/vendor/aos.css" />
+  <link rel="stylesheet" href="public/css/plugins/feature.css" />
+  <!-- Style css -->
+  <link rel="stylesheet" href="public/css/style.css" />
+  <style type="text/css">
+    .lf-progress {
+      -webkit-appearance: none;
+      -moz-apperance: none;
+      width: 100%;
+      /* margin: 0 10px; */
+      height: 4px;
+      border-radius: 3px;
+      cursor: pointer;
+    }
 
-      .lf-popover-content {
-        display: inline-block;
-        position: absolute;
-        opacity: 1;
-        visibility: visible;
-        transform: translate(0, -10px);
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-        transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
-      }
+    .lf-progress:focus {
+      outline: none;
+      border: none;
+    }
 
-      .lf-popover-content.hidden {
+    .lf-progress::-moz-range-track {
+      cursor: pointer;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    .lf-progress::-webkit-slider-thumb {
+      -webkit-appearance: none !important;
+      height: 13px;
+      width: 13px;
+      border: 0;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress::-moz-range-thumb {
+      -moz-appearance: none !important;
+      height: 13px;
+      width: 13px;
+      border: 0;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress::-ms-track {
+      width: 100%;
+      height: 3px;
+      cursor: pointer;
+      background: transparent;
+      border-color: transparent;
+      color: transparent;
+    }
+
+    .lf-progress::-ms-fill-lower {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .lf-progress::-ms-fill-upper {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .lf-progress::-ms-thumb {
+      border: 0;
+      height: 15px;
+      width: 15px;
+      border-radius: 50%;
+      background: #0fccce;
+      cursor: pointer;
+    }
+
+    .lf-progress:focus::-ms-fill-lower {
+      background: #ccc;
+    }
+
+    .lf-progress:focus::-ms-fill-upper {
+      background: #ccc;
+    }
+
+    .lf-player-container :focus {
+      outline: 0;
+    }
+
+    .lf-popover {
+      position: relative;
+    }
+
+    .lf-popover-content {
+      display: inline-block;
+      position: absolute;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -10px);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+    }
+
+    .lf-popover-content.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 0px);
+    }
+
+    .lf-player-btn-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .lf-player-btn {
+      cursor: pointer;
+      fill: #999;
+      width: 14px;
+    }
+
+    .lf-player-btn.active {
+      fill: #555;
+    }
+
+    .lf-popover {
+      position: relative;
+    }
+
+    .lf-popover-content {
+      display: inline-block;
+      position: absolute;
+      background-color: #ffffff;
+      opacity: 1;
+
+      transform: translate(0, -10px);
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+      transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
+      padding: 10px;
+    }
+
+    .lf-popover-content.hidden {
+      opacity: 0;
+      visibility: hidden;
+      transform: translate(0, 0px);
+    }
+
+    .lf-arrow {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      bottom: -9px;
+      border-style: solid;
+      border-width: 10px 10px 0px 10px;
+    }
+
+    .lf-left-align,
+    .lf-left-align .lfarrow {
+      left: 0;
+      right: unset;
+    }
+
+    .lf-right-align,
+    .lf-right-align .lf-arrow {
+      right: 0;
+      left: unset;
+    }
+
+    .lf-text-input {
+      border: 1px #ccc solid;
+      border-radius: 5px;
+      padding: 3px;
+      width: 60px;
+      margin: 0;
+    }
+
+    .lf-color-picker {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      height: 90px;
+    }
+
+    .lf-color-selectors {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .lf-color-component {
+      display: flex;
+      flex-direction: row;
+      font-size: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lf-color-component strong {
+      width: 40px;
+    }
+
+    .lf-color-component input[type="range"] {
+      margin: 0 0 0 10px;
+    }
+
+    .lf-color-component input[type="number"] {
+      width: 50px;
+      margin: 0 0 0 10px;
+    }
+
+    .lf-color-preview {
+      font-size: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 5px;
+    }
+
+    .lf-preview {
+      height: 60px;
+      width: 60px;
+    }
+
+    .lf-popover-snapshot {
+      width: 150px;
+    }
+
+    .lf-popover-snapshot h5 {
+      margin: 5px 0 10px 0;
+      font-size: 0.75rem;
+    }
+
+    .lf-popover-snapshot a {
+      display: block;
+      text-decoration: none;
+    }
+
+    .lf-popover-snapshot a:before {
+      content: "⥼";
+      margin-right: 5px;
+    }
+
+    .lf-popover-snapshot .lf-note {
+      display: block;
+      margin-top: 10px;
+      color: #999;
+    }
+
+    .lf-player-controls>div {
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+
+    .lf-player-controls>div:first-child {
+      margin-left: 0px;
+    }
+
+    .lf-player-controls>div:last-child {
+      margin-right: 0px;
+    }
+  </style>
+  <style id="_goober">
+    @keyframes go2264125279 {
+      from {
+        transform: scale(0) rotate(45deg);
         opacity: 0;
-        visibility: hidden;
-        transform: translate(0, 0px);
       }
 
-      .lf-player-btn-container {
-        display: flex;
-        align-items: center;
-      }
-      .lf-player-btn {
-        cursor: pointer;
-        fill: #999;
-        width: 14px;
-      }
-
-      .lf-player-btn.active {
-        fill: #555;
-      }
-
-      .lf-popover {
-        position: relative;
-      }
-
-      .lf-popover-content {
-        display: inline-block;
-        position: absolute;
-        background-color: #ffffff;
+      to {
+        transform: scale(1) rotate(45deg);
         opacity: 1;
-
-        transform: translate(0, -10px);
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-        transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
-        padding: 10px;
       }
+    }
 
-      .lf-popover-content.hidden {
+    @keyframes go3020080000 {
+      from {
+        transform: scale(0);
         opacity: 0;
-        visibility: hidden;
-        transform: translate(0, 0px);
       }
 
-      .lf-arrow {
-        position: absolute;
-        z-index: -1;
-        content: "";
-        bottom: -9px;
-        border-style: solid;
-        border-width: 10px 10px 0px 10px;
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go463499852 {
+      from {
+        transform: scale(0) rotate(90deg);
+        opacity: 0;
       }
 
-      .lf-left-align,
-      .lf-left-align .lfarrow {
-        left: 0;
-        right: unset;
+      to {
+        transform: scale(1) rotate(90deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go1268368563 {
+      from {
+        transform: rotate(0deg);
       }
 
-      .lf-right-align,
-      .lf-right-align .lf-arrow {
-        right: 0;
-        left: unset;
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes go1310225428 {
+      from {
+        transform: scale(0) rotate(45deg);
+        opacity: 0;
       }
 
-      .lf-text-input {
-        border: 1px #ccc solid;
-        border-radius: 5px;
-        padding: 3px;
-        width: 60px;
-        margin: 0;
+      to {
+        transform: scale(1) rotate(45deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes go651618207 {
+      0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
       }
 
-      .lf-color-picker {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        height: 90px;
+      40% {
+        height: 0;
+        width: 6px;
+        opacity: 1;
       }
 
-      .lf-color-selectors {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+      100% {
+        opacity: 1;
+        height: 10px;
+      }
+    }
+
+    @keyframes go901347462 {
+      from {
+        transform: scale(0.6);
+        opacity: 0.4;
       }
 
-      .lf-color-component {
-        display: flex;
-        flex-direction: row;
-        font-size: 12px;
-        align-items: center;
-        justify-content: center;
+      to {
+        transform: scale(1);
+        opacity: 1;
       }
+    }
 
-      .lf-color-component strong {
-        width: 40px;
-      }
+    .go4109123758 {
+      z-index: 9999;
+    }
 
-      .lf-color-component input[type="range"] {
-        margin: 0 0 0 10px;
-      }
+    .go4109123758>* {
+      pointer-events: auto;
+    }
+  </style>
+</head>
 
-      .lf-color-component input[type="number"] {
-        width: 50px;
-        margin: 0 0 0 10px;
-      }
-
-      .lf-color-preview {
-        font-size: 12px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        padding-left: 5px;
-      }
-
-      .lf-preview {
-        height: 60px;
-        width: 60px;
-      }
-
-      .lf-popover-snapshot {
-        width: 150px;
-      }
-      .lf-popover-snapshot h5 {
-        margin: 5px 0 10px 0;
-        font-size: 0.75rem;
-      }
-      .lf-popover-snapshot a {
-        display: block;
-        text-decoration: none;
-      }
-      .lf-popover-snapshot a:before {
-        content: "⥼";
-        margin-right: 5px;
-      }
-      .lf-popover-snapshot .lf-note {
-        display: block;
-        margin-top: 10px;
-        color: #999;
-      }
-      .lf-player-controls > div {
-        margin-right: 5px;
-        margin-left: 5px;
-      }
-      .lf-player-controls > div:first-child {
-        margin-left: 0px;
-      }
-      .lf-player-controls > div:last-child {
-        margin-right: 0px;
-      }
-    </style>
-    <style id="_goober">
-      @keyframes go2264125279 {
-        from {
-          transform: scale(0) rotate(45deg);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1) rotate(45deg);
-          opacity: 1;
-        }
-      }
-      @keyframes go3020080000 {
-        from {
-          transform: scale(0);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-      @keyframes go463499852 {
-        from {
-          transform: scale(0) rotate(90deg);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1) rotate(90deg);
-          opacity: 1;
-        }
-      }
-      @keyframes go1268368563 {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      @keyframes go1310225428 {
-        from {
-          transform: scale(0) rotate(45deg);
-          opacity: 0;
-        }
-        to {
-          transform: scale(1) rotate(45deg);
-          opacity: 1;
-        }
-      }
-      @keyframes go651618207 {
-        0% {
-          height: 0;
-          width: 0;
-          opacity: 0;
-        }
-        40% {
-          height: 0;
-          width: 6px;
-          opacity: 1;
-        }
-        100% {
-          opacity: 1;
-          height: 10px;
-        }
-      }
-      @keyframes go901347462 {
-        from {
-          transform: scale(0.6);
-          opacity: 0.4;
-        }
-        to {
-          transform: scale(1);
-          opacity: 1;
-        }
-      }
-      .go4109123758 {
-        z-index: 9999;
-      }
-      .go4109123758 > * {
-        pointer-events: auto;
-      }
-    </style>
-  </head>
-
-  <body
-    class="template-color-1 spybody"
-    data-spy="scroll"
-    data-target=".navbar-example2"
-    data-offset="70"
-    data-aos-easing="ease"
-    data-aos-duration="400"
-    data-aos-delay="0"
-    data-new-gr-c-s-check-loaded="14.1111.0"
-    data-gr-ext-installed=""
-  >
-    <!-- Start Header -->
-    <header
-      class="rn-header haeder-default black-logo-version header--fixed header--sticky sticky"
-    >
-      <div
-        class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center"
-      >
-        <!-- Start Header Left -->
-        <div class="col-lg-2 col-6">
-          <div class="header-left">
-            <div class="logo">
-              <a href="#">
-                <h5 style="color: black">Agbo</h5>
-                <!-- <img src="public/images/logo/logo.JPG" alt="logo"> -->
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- End Header Left -->
-        <!-- Start Header Center -->
-        <div class="col-lg-10 col-6">
-          <div class="header-center">
-            <nav
-              id="sideNav"
-              class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav"
-            >
-              <!-- Start Mainmanu Nav -->
-              <ul class="primary-menu nav nav-pills">
-                <li class="nav-item">
-                  <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item current">
-                  <a class="nav-link" href="#resume">Resume</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contacts">Contact</a>
-                </li>
-              </ul>
-              <!-- End Mainmanu Nav -->
-            </nav>
-            <!-- Start Header Right  -->
-            <div class="header-right">
-              <div class="hamberger-menu d-block d-xl-none">
-                <i id="menuBtn" class="feather-menu humberger-menu"></i>
-              </div>
-              <div class="close-menu d-block">
-                <span class="closeTrigger">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-x"
-                  >
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                  </svg>
-                </span>
-              </div>
-            </div>
-            <!-- End Header Right  -->
-          </div>
-        </div>
-        <!-- End Header Center -->
-      </div>
-    </header>
-    <!-- End Header Area -->
-    <!-- Start Popup Mobile Menu  -->
-    <div class="popup-mobile-menu">
-      <div class="inner">
-        <div class="menu-top">
-          <div class="menu-header">
-            <a class="logo" href="#">
-              Agbo Emmanuel
-              <!-- <img src="" alt="Agbo Emmanuel"> -->
+<body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="70"
+  data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-new-gr-c-s-check-loaded="14.1111.0"
+  data-gr-ext-installed="">
+  <!-- Start Header -->
+  <header class="rn-header haeder-default black-logo-version header--fixed header--sticky sticky">
+    <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
+      <!-- Start Header Left -->
+      <div class="col-lg-2 col-6">
+        <div class="header-left">
+          <div class="logo">
+            <a href="#">
+              <h5 style="color: black">EMMANUEL</h5>
+              <!-- <img src="public/images/logo/logo.JPG" alt="logo"> -->
             </a>
-            <div class="close-button">
-              <button class="close-menu-activation close">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  class="feather feather-x"
-                >
+          </div>
+        </div>
+      </div>
+
+      <!-- End Header Left -->
+      <!-- Start Header Center -->
+      <div class="col-lg-10 col-6">
+        <div class="header-center">
+          <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
+            <!-- Start Mainmanu Nav -->
+            <ul class="primary-menu nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#portfolio">Portfolio</a>
+              </li>
+              <li class="nav-item current">
+                <a class="nav-link" href="#resume">Resume</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contacts">Contact</a>
+              </li>
+            </ul>
+            <!-- End Mainmanu Nav -->
+          </nav>
+          <!-- Start Header Right  -->
+          <div class="header-right">
+            <div class="hamberger-menu d-block d-xl-none">
+              <i id="menuBtn" class="feather-menu humberger-menu"></i>
+            </div>
+            <div class="close-menu d-block">
+              <span class="closeTrigger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-x">
                   <line x1="18" y1="6" x2="6" y2="18"></line>
                   <line x1="6" y1="6" x2="18" y2="18"></line>
                 </svg>
-              </button>
+              </span>
             </div>
           </div>
-          <p class="discription">A dedicated Software Developers</p>
-        </div>
-        <div class="content">
-          <ul class="primary-menu nav nav-pills onepagenav">
-            <li class="nav-item">
-              <a class="nav-link smoth-animation active" href="#home">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link smoth-animation" href="#portfolio"
-                >Portfolio</a
-              >
-            </li>
-            <li class="nav-item current">
-              <a class="nav-link smoth-animation" href="#resume">Resume</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link smoth-animation" href="#testimonial"
-                >Clients</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link smoth-animation" href="#contacts">Contact</a>
-            </li>
-          </ul>
-          <!-- social sharea area -->
-          <div class="social-share-style-1 mt--40">
-            <span class="title">find with me</span>
-            <ul class="social-share d-flex liststyle">
-              <li class="facebook">
-                <a href="#"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-facebook"
-                  >
-                    <path
-                      d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-                    ></path></svg
-                ></a>
-              </li>
-              <li class="instagram">
-                <a href="#"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-instagram"
-                  >
-                    <rect
-                      x="2"
-                      y="2"
-                      width="20"
-                      height="20"
-                      rx="5"
-                      ry="5"
-                    ></rect>
-                    <path
-                      d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
-                    ></path>
-                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg
-                ></a>
-              </li>
-              <li class="linkedin">
-                <a href="#"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-linkedin"
-                  >
-                    <path
-                      d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                    ></path>
-                    <rect x="2" y="9" width="4" height="12"></rect>
-                    <circle cx="4" cy="4" r="2"></circle></svg
-                ></a>
-              </li>
-            </ul>
-          </div>
-          <!-- end -->
+          <!-- End Header Right  -->
         </div>
       </div>
+      <!-- End Header Center -->
     </div>
-    <!-- End Popup Mobile Menu  -->
+  </header>
+  <!-- End Header Area -->
+  <!-- Start Popup Mobile Menu  -->
+  <div class="popup-mobile-menu">
+    <div class="inner">
+      <div class="menu-top">
+        <div class="menu-header">
+          <a class="logo" href="#">
+            Agbo Emmanuel
+            <!-- <img src="" alt="Agbo Emmanuel"> -->
+          </a>
+          <div class="close-button">
+            <button class="close-menu-activation close">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-x">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="discription">A Dedicated Software Developers</p>
+      </div>
+      <div class="content">
+        <ul class="primary-menu nav nav-pills onepagenav">
+          <li class="nav-item">
+            <a class="nav-link smoth-animation active" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item current">
+            <a class="nav-link smoth-animation" href="#resume">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smoth-animation" href="#testimonial">Clients</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link smoth-animation" href="#contacts">Contact</a>
+          </li>
+        </ul>
+        <!-- social sharea area -->
+        <div class="social-share-style-1 mt--40">
+          <span class="title">find with me</span>
+          <ul class="social-share d-flex liststyle">
+            <li class="facebook">
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-facebook">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg></a>
+            </li>
+            <li class="instagram">
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-instagram">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg></a>
+            </li>
+            <li class="linkedin">
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="feather feather-linkedin">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg></a>
+            </li>
+          </ul>
+        </div>
+        <!-- end -->
+      </div>
+    </div>
+  </div>
+  <!-- End Popup Mobile Menu  -->
 
-    <main class="main-page-wrapper">
-      <!-- Start Slider Area -->
-      <div id="home" class="rn-slider-area">
-        <div class="slide slider-style-1">
-          <div class="container">
-            <div class="row row--30 align-items-center">
-              <div class="order-1 order-lg-1 col-lg-5">
-                <div class="thumbnail">
-                  <div class="inner">
-                    <img
-                      src="public/images/slider/banner-09.png"
-                      alt="Personal Portfolio Images"
-                    />
-                  </div>
+  <main class="main-page-wrapper">
+    <!-- Start Slider Area -->
+    <div id="home" class="rn-slider-area">
+      <div class="slide slider-style-1">
+        <div class="container">
+          <div class="row row--30 align-items-center">
+            <div class="order-1 order-lg-1 col-lg-5">
+              <div class="thumbnail">
+                <div class="inner">
+                  <img src="public/images/slider/banner-03.JPG" alt="Personal Portfolio Images" />
                 </div>
               </div>
+            </div>
 
-              <div
-                class="order-2 order-lg-2 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30"
-              >
-                <div class="content">
-                  <div class="inner">
-                    <span class="subtitle">Welcome to my world</span>
-                    <h1 class="title">
-                      Hi, I’m <span>Agbo Emmanuel ThankGod</span><br />
-                      <span class="header-caption" id="page-top">
-                        <!-- type headline start-->
-                        <span class="cd-headline clip is-full-width">
-                          <span style="font-size: 30px">a </span>
-                          <!-- ROTATING TEXT -->
-                          <span
-                            class="cd-words-wrapper"
-                            style="width: 533.188px"
-                          >
-                            <b class="is-hidden" style="font-size: 30px"
-                              >Backend Web Developer(Django)</b
-                            >
-                            <b class="is-visible" style="font-size: 30px"
-                              >Backend Web Developer(Laravel)</b
-                            >
-                            <b class="is-hidden" style="font-size: 30px"
-                              >Backend Web Developer(PHP)</b
-                            >
-                          </span>
+            <div class="order-2 order-lg-2 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
+              <div class="content">
+                <div class="inner">
+                  <span class="subtitle">Welcome to my World</span>
+                  <h1 class="title">
+                    Hi, I’m <span>Agbo Emmanuel ThankGod</span><br />
+                    <span class="header-caption" id="page-top">
+                      <!-- type headline start-->
+                      <span class="cd-headline clip is-full-width">
+                        <!-- <span style="font-size: 30px">a </span> -->
+                        <!-- ROTATING TEXT -->
+                        <span class="cd-words-wrapper" style="width: 533.188px">
+                          <!-- <b class="is-hidden" style="font-size: 30px">Backend Web Developer(Django)</b> -->
+                          <b class="is-visible" style="font-size: 30px">Backend Web Developer(Php Laravel)</b>
+                          <b class="is-hidden" style="font-size: 30px">Backend API Developer(Php Laravel)</b>
+                          <b class="is-hidden" style="font-size: 30px">Backend Web/API Developer(Beginner Nest JS)</b>
                         </span>
-                        <!-- type headline end -->
                       </span>
-                    </h1>
+                      <!-- type headline end -->
+                    </span>
+                  </h1>
 
-                    <div>
-                      <p class="description">
-                        As an individual with a keen interest in coding and the
-                        ability to translate ideas into functional code, I have
-                        recently employed Laravel to develop a website that
-                        simplifies the process of converting betting codes to
-                        preferred bookies. My desire is to fuse my passion for
-                        continual learning with my software development
-                        proficiency to create exceptional websites for clients.
-                      </p>
-                    </div>
+                  <div>
+                    <p class="description">
+                      I am a PHP Laravel developer with over four years of experience in web development. I have worked with a couple of companies, contributing to building scalable applications, and I have also completed several personal projects since my school days. My expertise lies in backend development, working with Laravel, database management, API development, and optimizing performance in web applications.
+
+                      I focus on improving my skills, working on projects that involve complex business logic, and collaborating with teams to deliver high-quality software solutions. I am passionate about writing clean, efficient, and maintainable code, and I always look for opportunities to grow and take on new challenges in the Laravel ecosystem.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- <div class="row">
+          </div>
+          <!-- <div class="row">
                                 <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
                                     <div class="social-share-inner-left">
                                         <span class="title">find with me</span>
@@ -659,1228 +587,907 @@
                                     </div>
                                 </div>
                             </div> -->
-          </div>
         </div>
       </div>
-      <!-- End Slider Area -->
+    </div>
+    <!-- End Slider Area -->
 
-      <!-- Start Portfolio Area -->
-      <div
-        class="rn-portfolio-area rn-section-gap section-separator"
-        id="portfolio"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title text-center">
-                <span class="subtitle"
-                  >Visit my portfolio and keep your feedback</span
-                >
-                <h2 class="title">My Portfolio</h2>
-              </div>
+    <!-- Start Portfolio Area -->
+    <div class="rn-portfolio-area rn-section-gap section-separator" id="portfolio">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title text-center">
+              <span class="subtitle">Visit my portfolio and keep your feedback</span>
+              <h2 class="title">My Portfolio</h2>
             </div>
-          </div>
-
-          <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
-            <!-- Start Single Portfolio -->
-
-            <div
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-once="true"
-              class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate"
-            >
-              <div
-                class="rn-portfolio"
-                data-bs-toggle="modal"
-                data-bs-target="#BetslipSwitch"
-              >
-                <div class="inner">
-                  <div class="thumbnail">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="public/images/portfolio/Screenshot 2023-09-01 082144.png"
-                        alt="Personal Portfolio Images"
-                      />
-                    </a>
-                  </div>
-                  <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Development</a>
-                      </div>
-                      <div class="meta">
-                        <span
-                          ><a href="javascript:void(0)"
-                            ><i class="feather-heart"></i
-                          ></a>
-                        </span>
-                      </div>
-                    </div>
-                    <h4 class="title">
-                      <a href="javascript:void(0)"
-                        >BetslipSwitch <i class="feather-arrow-up-right"></i
-                      ></a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-once="true"
-              class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate"
-            >
-              <div
-                class="rn-portfolio"
-                data-bs-toggle="modal"
-                data-bs-target="#williams-academy"
-              >
-                <div class="inner">
-                  <div class="thumbnail">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="public/images/portfolio/williams.png"
-                        alt="Personal Portfolio Images"
-                      />
-                    </a>
-                  </div>
-                  <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Development</a>
-                      </div>
-                      <div class="meta">
-                        <span
-                          ><a href="javascript:void(0)"
-                            ><i class="feather-heart"></i
-                          ></a>
-                        </span>
-                      </div>
-                    </div>
-                    <h4 class="title">
-                      <a href="javascript:void(0)"
-                        >Williams-Academy
-                        <i class="feather-arrow-up-right"></i
-                      ></a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-once="true"
-              class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate"
-            >
-              <div
-                class="rn-portfolio"
-                data-bs-toggle="modal"
-                data-bs-target="#Ace-Inc"
-              >
-                <div class="inner">
-                  <div class="thumbnail">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="public/images/portfolio/ace.jpg"
-                        alt="Personal Portfolio Images"
-                      />
-                    </a>
-                  </div>
-                  <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Development</a>
-                      </div>
-                      <div class="meta">
-                        <span
-                          ><a href="javascript:void(0)"
-                            ><i class="feather-heart"></i
-                          ></a>
-                        </span>
-                      </div>
-                    </div>
-                    <h4 class="title">
-                      <a href="javascript:void(0)"
-                        >Ace-Inc <i class="feather-arrow-up-right"></i
-                      ></a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-once="true"
-              class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate"
-            >
-              <div
-                class="rn-portfolio"
-                data-bs-toggle="modal"
-                data-bs-target="#Fake-Product-Identification-System"
-              >
-                <div class="inner">
-                  <div class="thumbnail">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="public/images/portfolio/fpis.jpg"
-                        alt="Personal Portfolio Images"
-                      />
-                    </a>
-                  </div>
-                  <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Development</a>
-                      </div>
-                      <div class="meta">
-                        <span
-                          ><a href="javascript:void(0)"
-                            ><i class="feather-heart"></i
-                          ></a>
-                        </span>
-                      </div>
-                    </div>
-                    <h4 class="title">
-                      <a href="javascript:void(0)"
-                        >Fake-Product-Identification-System
-                        <i class="feather-arrow-up-right"></i
-                      ></a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              data-aos="fade-up"
-              data-aos-delay="100"
-              data-aos-once="true"
-              class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate"
-            >
-              <div
-                class="rn-portfolio"
-                data-bs-toggle="modal"
-                data-bs-target="#Financial-Trade-Mangament"
-              >
-                <div class="inner">
-                  <div class="thumbnail">
-                    <a href="javascript:void(0)">
-                      <img
-                        src="public/images/portfolio/ftm.jpg"
-                        alt="Personal Portfolio Images"
-                      />
-                    </a>
-                  </div>
-                  <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Development</a>
-                      </div>
-                      <div class="meta">
-                        <span
-                          ><a href="javascript:void(0)"
-                            ><i class="feather-heart"></i
-                          ></a>
-                        </span>
-                      </div>
-                    </div>
-                    <h4 class="title">
-                      <a href="javascript:void(0)"
-                        >Financial-Trade-Mangament
-                        <i class="feather-arrow-up-right"></i
-                      ></a>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div
-              class="modal fade"
-              id="BetslipSwitch"
-              tabindex="-1"
-              role="dialog"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true"
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-x"
-                        >
-                          <line x1="18" y1="6" x2="6" y2="18"></line>
-                          <line x1="6" y1="6" x2="18" y2="18"></line></svg
-                      ></span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row align-items-center">
-                      <div class="col-lg-6">
-                        <div class="portfolio-popup-thumbnail">
-                          <div class="image">
-                            <img
-                              class="w-100"
-                              src="public/images/portfolio/betslipswitch.jpg"
-                              alt="slide"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-6">
-                        <div class="text-content">
-                          <h3>
-                            <span>Featured - Laravel</span> Web Development
-                          </h3>
-                          <p class="mb--30">
-                            A website for converting sport betting codes from
-                            one bookie to another
-                          </p>
-                          <div class="button-group mt--20">
-                            <a href="#" class="rn-btn thumbs-icon">
-                              <div class="mydiv">Hosted Online</div>
-                              <!-- <i data-feather="thumbs-up"></i> -->
-                            </a>
-                            <a
-                              href="https://www.betslipswitch.com"
-                              class="rn-btn"
-                              target="_blank"
-                            >
-                              <span>VIEW PROJECT</span>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                              >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <!-- End of .text-content -->
-                      </div>
-                    </div>
-                    <!-- End of .row Body-->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="modal fade"
-              id="williams-academy"
-              tabindex="-1"
-              role="dialog"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true"
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-x"
-                        >
-                          <line x1="18" y1="6" x2="6" y2="18"></line>
-                          <line x1="6" y1="6" x2="18" y2="18"></line></svg
-                      ></span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row align-items-center">
-                      <div class="col-lg-6">
-                        <div class="portfolio-popup-thumbnail">
-                          <div class="image">
-                            <img
-                              class="w-100"
-                              src="public/images/portfolio/williams.png"
-                              alt="slide"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-6">
-                        <div class="text-content">
-                          <h3><span>Featured - Python(Django)</span> Web Development</h3>
-                          <p class="mb--30">Online Crypto and NFT Tutorial Website</p>
-                          <div class="button-group mt--20">
-                            <a href="#" class="rn-btn thumbs-icon">
-                              <div class="myotherdiv">Personal Project</div>
-                              <!-- <i data-feather="thumbs-up"></i> -->
-                            </a>
-                            <a
-                              href="https://github.com/scarface1129/Williams_Academy"
-                              class="rn-btn"
-                              target="_blank"
-                            >
-                              <span>VIEW PROJECT</span>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                              >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <!-- End of .text-content -->
-                      </div>
-                    </div>
-                    <!-- End of .row Body-->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="modal fade"
-              id="Ace-Inc"
-              tabindex="-1"
-              role="dialog"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true"
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-x"
-                        >
-                          <line x1="18" y1="6" x2="6" y2="18"></line>
-                          <line x1="6" y1="6" x2="18" y2="18"></line></svg
-                      ></span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row align-items-center">
-                      <div class="col-lg-6">
-                        <div class="portfolio-popup-thumbnail">
-                          <div class="image">
-                            <img
-                              class="w-100"
-                              src="public/images/portfolio/ace.jpg"
-                              alt="slide"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-6">
-                        <div class="text-content">
-                          <h3><span>Featured - Php</span> Web-Development</h3>
-                          <p class="mb--30">
-                            A sports company where matches are being drafted and
-                            players also drafted
-                          </p>
-                          <div class="button-group mt--20">
-                            <a href="#" class="rn-btn thumbs-icon">
-                              <div class="myotherdiv">Personal Project</div>
-                              <!-- <i data-feather="thumbs-up"></i> -->
-                            </a>
-                            <a
-                              href="https://github.com/scarface1129/Ace"
-                              class="rn-btn"
-                              target="_blank"
-                            >
-                              <span>VIEW PROJECT</span>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                              >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <!-- End of .text-content -->
-                      </div>
-                    </div>
-                    <!-- End of .row Body-->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="modal fade"
-              id="Fake-Product-Identification-System"
-              tabindex="-1"
-              role="dialog"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true"
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-x"
-                        >
-                          <line x1="18" y1="6" x2="6" y2="18"></line>
-                          <line x1="6" y1="6" x2="18" y2="18"></line></svg
-                      ></span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row align-items-center">
-                      <div class="col-lg-6">
-                        <div class="portfolio-popup-thumbnail">
-                          <div class="image">
-                            <img
-                              class="w-100"
-                              src="public/images/portfolio/fpis.jpg"
-                              alt="slide"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-6">
-                        <div class="text-content">
-                          <h3>
-                            <span>Featured - Django</span> Web Development
-                          </h3>
-                          <p class="mb--30">
-                            This is a software solution that helps businesses
-                            and consumers verify the authenticity of products in
-                            the market. It does this by analyzing unique product
-                            codes and comparing them against a database of known
-                            genuine codes through scanning of a QR code.
-                          </p>
-                          <div class="button-group mt--20">
-                            <a href="#" class="rn-btn thumbs-icon">
-                              <div class="myotherdiv">Personal Project</div>
-                              <!-- <i data-feather="thumbs-up"></i> -->
-                            </a>
-                            <a
-                              href="https://github.com/scarface1129/Fake_Product_Identification_System"
-                              class="rn-btn"
-                              target="_blank"
-                            >
-                              <span>VIEW PROJECT</span>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                              >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <!-- End of .text-content -->
-                      </div>
-                    </div>
-                    <!-- End of .row Body-->
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="modal fade"
-              id="Financial-Trade-Mangament"
-              tabindex="-1"
-              role="dialog"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog modal-dialog-centered" role="document">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button
-                      type="button"
-                      class="close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true"
-                        ><svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="24"
-                          height="24"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="feather feather-x"
-                        >
-                          <line x1="18" y1="6" x2="6" y2="18"></line>
-                          <line x1="6" y1="6" x2="18" y2="18"></line></svg
-                      ></span>
-                    </button>
-                  </div>
-                  <div class="modal-body">
-                    <div class="row align-items-center">
-                      <div class="col-lg-6">
-                        <div class="portfolio-popup-thumbnail">
-                          <div class="image">
-                            <img
-                              class="w-100"
-                              src="public/images/portfolio/ftm.jpg"
-                              alt="slide"
-                            />
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="col-lg-6">
-                        <div class="text-content">
-                          <h3><span>Featured - Php</span> Web Development</h3>
-                          <p class="mb--30">Investment Company for bitcoin</p>
-                          <div class="button-group mt--20">
-                            <a href="#" class="rn-btn thumbs-icon">
-                              <div class="myotherdiv">Personal Project</div>
-                              <!-- <i data-feather="thumbs-up"></i> -->
-                            </a>
-                            <a
-                              href="https://github.com/scarface1129/FTM"
-                              class="rn-btn"
-                              target="_blank"
-                            >
-                              <span>VIEW PROJECT</span>
-                              <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-chevron-right"
-                              >
-                                <polyline points="9 18 15 12 9 6"></polyline>
-                              </svg>
-                            </a>
-                          </div>
-                        </div>
-                        <!-- End of .text-content -->
-                      </div>
-                    </div>
-                    <!-- End of .row Body-->
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- End Single Portfolio -->
           </div>
         </div>
-      </div>
-      <!-- End portfolio Area -->
-      <!-- Start Resume Area -->
-      <div class="rn-resume-area rn-section-gap section-separator" id="resume">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title text-center">
-                <span class="subtitle">3+ Years of Experience</span>
-                <h2 class="title">My Resume</h2>
-              </div>
-            </div>
-          </div>
-          <div class="row mt--45">
-            <div class="col-lg-12">
-              <ul class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
-                <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    id="education-tab"
-                    data-bs-toggle="tab"
-                    href="#education"
-                    role="tab"
-                    aria-controls="education"
-                    aria-selected="true"
-                    >education / Job Experience
+
+        <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
+          <!-- Start Single Portfolio -->
+
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
+            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#TellaSport">
+              <div class="inner">
+                <div class="thumbnail">
+                  <a href="javascript:void(0)">
+                    <img src="public/images/portfolio/tellasport.png"
+                      alt="TellaSport.com" />
                   </a>
-                </li>
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    id="professional-tab"
-                    data-bs-toggle="tab"
-                    href="#professional"
-                    role="tab"
-                    aria-controls="professional"
-                    aria-selected="false"
-                    >professional Skills</a
-                  >
-                </li>
-
-                <li class="nav-item">
-                  <a
-                    class="nav-link"
-                    id="interview-tab"
-                    data-bs-toggle="tab"
-                    href="#interview"
-                    role="tab"
-                    aria-controls="interview"
-                    aria-selected="false"
-                    >interview</a
-                  >
-                </li>
-              </ul>
-
-              <!-- Start Tab Content Wrapper  -->
-              <div class="rn-nav-content tab-content" id="myTabContents">
-                <!-- Start Single Tab  -->
-                <div
-                  class="tab-pane show active fade single-tab-area"
-                  id="education"
-                  role="tabpanel"
-                  aria-labelledby="education-tab"
-                >
-                  <div class="personal-experience-inner mt--40">
-                    <div class="row">
-                      <!-- Start Skill List Area  -->
-                      <div class="col-lg-6 col-md-12 col-12">
-                        <div class="content">
-                          <!-- <span class="subtitle">2007 - 2010</span> -->
-                          <h4 class="maintitle">Education Quality</h4>
-                          <div class="experience-list">
-                            <!-- Start Single List  -->
-                            <div class="resume-single-list">
-                              <div class="inner">
-                                <div class="heading">
-                                  <div class="title">
-                                    <h4>
-                                      WAEC Certificate And NECO certificate
-                                    </h4>
-                                    <span
-                                      >St. Augustines Seminary Ezzamgbo</span
-                                    >
-                                  </div>
-                                  <div class="date-of-time">
-                                    <span>Distinction</span>
-                                  </div>
-                                </div>
-                                <p class="description">
-                                  
-                                </p>
-                              </div>
-                            </div>
-                            <!-- End Single List  -->
-                            <!-- Start Single List  -->
-                            <div class="resume-single-list">
-                              <div class="inner">
-                                <div class="heading">
-                                  <div class="title">
-                                    <h4>BSC Certificate</h4>
-                                    <span
-                                      >Nnamdi Azikiwe University Awka Anambra
-                                      State Nigeria</span
-                                    >
-                                  </div>
-                                  <div class="date-of-time">
-                                    <span>4.56</span>
-                                  </div>
-                                </div>
-                                <p class="description">
-                                  
-                                </p>
-                              </div>
-                            </div>
-                            <!-- End Single List  -->
-                          </div>
-                        </div>
-                      </div>
-                      <!-- End Skill List Area  -->
-
-                      <!-- Start Skill List Area 2nd  -->
-                      <div
-                        class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60"
-                      >
-                        <div class="content">
-                          <!-- <span class="subtitle">2007 - 2010</span> -->
-                          <h4 class="maintitle">Job Experience</h4>
-                          <div class="experience-list">
-                            <!-- Start Single List  -->
-                            <div class="resume-single-list">
-                              <div class="inner">
-                                <div class="heading">
-                                  <div class="title">
-                                    <h4>internship</h4>
-                                    <span
-                                      >Techo Craft IT Company Enugu Nigeria (4
-                                      October 2021-27 January 2022)</span
-                                    >
-                                  </div>
-                                  <!-- <div class="date-of-time">
-                                                                    <span>4.70/5</span>
-                                                                </div> -->
-                                </div>
-                                <p class="description">
-                                  •Collaborated with other interns and other
-                                  staffs to achieve quality client goals.
-                                </p>
-                              </div>
-                            </div>
-                            <!-- End Single List  -->
-                            <!-- Start Single List  -->
-                            <div class="resume-single-list">
-                              <div class="inner">
-                                <div class="heading">
-                                  <div class="title">
-                                    <h4>Junior Developer</h4>
-                                    <span
-                                      >Iceztech Company Awka Anambra State (22
-                                      January 2022-date)</span
-                                    >
-                                  </div>
-                                  <!-- <div class="date-of-time">
-                                                                    <span>4.70/5</span>
-                                                                </div> -->
-                                </div>
-                                <p class="description">
-                                  •Collaborated with other developers and staffs
-                                  to achieve quality client goals.
-                                </p>
-                              </div>
-                            </div>
-                            <!-- End Single List  -->
-                          </div>
-                        </div>
-                      </div>
-                      <!-- End Skill List Area  -->
+                </div>
+                <div class="content">
+                  <div class="category-info">
+                    <div class="category-list">
+                      <a href="javascript:void(0)">WEB/API Development</a>
+                    </div>
+                    <div class="meta">
+                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
+                      </span>
                     </div>
                   </div>
+                  <h4 class="title">
+                    <a href="javascript:void(0)">TellaSport <i class="feather-arrow-up-right"></i></a>
+                  </h4>
                 </div>
-                <!-- End Single Tab  -->
+              </div>
+            </div>
+          </div>
 
-                <!-- Start Single Tab  -->
-                <div
-                  class="tab-pane fade"
-                  id="professional"
-                  role="tabpanel"
-                  aria-labelledby="professional-tab"
-                >
-                  <div class="personal-experience-inner mt--40">
-                    <div class="row row--40">
-                      <!-- Start Single Progressbar  -->
-                      <div class="container col-lg-8 col-md-8 col-12">
-                        <div class="progress-wrapper">
-                          <div class="content">
-                            <span class="subtitle">Features</span>
-                            <h4 class="maintitle">Development Skill</h4>
-                            <!-- Start Single Progress Charts -->
-                            <div class="progress-charts">
-                              <h6 class="heading heading-h6">django</h6>
-                              <div class="progress">
-                                <div
-                                  class="progress-bar wow fadeInLeft"
-                                  data-wow-duration="0.5s"
-                                  data-wow-delay=".3s"
-                                  role="progressbar"
-                                  style="
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
+            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#BetslipSwitch">
+              <div class="inner">
+                <div class="thumbnail">
+                  <a href="javascript:void(0)">
+                    <img src="public/images/portfolio/Screenshot 2023-09-01 082144.png"
+                      alt="Personal Portfolio Images" />
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="category-info">
+                    <div class="category-list">
+                      <a href="javascript:void(0)">API/WEB Development</a>
+                    </div>
+                    <div class="meta">
+                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <h4 class="title">
+                    <a href="javascript:void(0)">BetslipSwitch <i class="feather-arrow-up-right"></i></a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
+            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#williams-academy">
+              <div class="inner">
+                <div class="thumbnail">
+                  <a href="javascript:void(0)">
+                    <img src="public/images/portfolio/williams.png" alt="Personal Portfolio Images" />
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="category-info">
+                    <div class="category-list">
+                      <a href="javascript:void(0)">WEB Development</a>
+                    </div>
+                    <div class="meta">
+                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <h4 class="title">
+                    <a href="javascript:void(0)">Williams-Academy
+                      <i class="feather-arrow-up-right"></i></a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
+            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#Ace-Inc">
+              <div class="inner">
+                <div class="thumbnail">
+                  <a href="javascript:void(0)">
+                    <img src="public/images/portfolio/ace.jpg" alt="Personal Portfolio Images" />
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="category-info">
+                    <div class="category-list">
+                      <a href="javascript:void(0)">WEB Development</a>
+                    </div>
+                    <div class="meta">
+                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <h4 class="title">
+                    <a href="javascript:void(0)">Ace-Inc <i class="feather-arrow-up-right"></i></a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
+            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#Fake-Product-Identification-System">
+              <div class="inner">
+                <div class="thumbnail">
+                  <a href="javascript:void(0)">
+                    <img src="public/images/portfolio/fpis.jpg" alt="Personal Portfolio Images" />
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="category-info">
+                    <div class="category-list">
+                      <a href="javascript:void(0)">WEB Development</a>
+                    </div>
+                    <div class="meta">
+                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <h4 class="title">
+                    <a href="javascript:void(0)">Fake-Product-Identification-System
+                      <i class="feather-arrow-up-right"></i></a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
+            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
+            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#Financial-Trade-Mangament">
+              <div class="inner">
+                <div class="thumbnail">
+                  <a href="javascript:void(0)">
+                    <img src="public/images/portfolio/ftm.jpg" alt="Personal Portfolio Images" />
+                  </a>
+                </div>
+                <div class="content">
+                  <div class="category-info">
+                    <div class="category-list">
+                      <a href="javascript:void(0)">WEB Development</a>
+                    </div>
+                    <div class="meta">
+                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
+                      </span>
+                    </div>
+                  </div>
+                  <h4 class="title">
+                    <a href="javascript:void(0)">Financial-Trade-Mangament
+                      <i class="feather-arrow-up-right"></i></a>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="TellaSport" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <div class="portfolio-popup-thumbnail">
+                        <div class="image">
+                          <img class="w-100" src="public/images/portfolio/tellasport_detail.png" alt="tellasport.com" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="text-content">
+                        <h3>
+                          <span>Featured - Laravel</span> WEB/API Development
+                        </h3>
+                        <p class="mb--30">
+                          A website for converting sport betting codes from
+                          one bookie to another
+                        </p>
+                        <div class="button-group mt--20">
+                          <a href="#" class="rn-btn thumbs-icon">
+                            <div class="mydiv">Hosted Online</div>
+                            <!-- <i data-feather="thumbs-up"></i> -->
+                          </a>
+                          <a href="https://www.tellasport.com" class="rn-btn" target="_blank">
+                            <span>VIEW PROJECT</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="feather feather-chevron-right">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End of .text-content -->
+                    </div>
+                  </div>
+                  <!-- End of .row Body-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="BetslipSwitch" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <div class="portfolio-popup-thumbnail">
+                        <div class="image">
+                          <img class="w-100" src="public/images/portfolio/betslipswitch.jpg" alt="slide" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="text-content">
+                        <h3>
+                          <span>Featured - Laravel</span> Web Development
+                        </h3>
+                        <p class="mb--30">
+                          A website for converting sport betting codes from
+                          one bookie to another
+                        </p>
+                        <div class="button-group mt--20">
+                          <a href="#" class="rn-btn thumbs-icon">
+                            <div class="mydiv">Hosted Online</div>
+                            <!-- <i data-feather="thumbs-up"></i> -->
+                          </a>
+                          <a href="https://www.betslipswitch.com" class="rn-btn" target="_blank">
+                            <span>VIEW PROJECT</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="feather feather-chevron-right">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End of .text-content -->
+                    </div>
+                  </div>
+                  <!-- End of .row Body-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="williams-academy" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <div class="portfolio-popup-thumbnail">
+                        <div class="image">
+                          <img class="w-100" src="public/images/portfolio/williams.png" alt="slide" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="text-content">
+                        <h3><span>Featured - Python(Django)</span> Web Development</h3>
+                        <p class="mb--30">Online Crypto and NFT Tutorial Website</p>
+                        <div class="button-group mt--20">
+                          <a href="#" class="rn-btn thumbs-icon">
+                            <div class="myotherdiv">Personal Project</div>
+                            <!-- <i data-feather="thumbs-up"></i> -->
+                          </a>
+                          <a href="https://github.com/scarface1129/Williams_Academy" class="rn-btn" target="_blank">
+                            <span>VIEW PROJECT</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="feather feather-chevron-right">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End of .text-content -->
+                    </div>
+                  </div>
+                  <!-- End of .row Body-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="Ace-Inc" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <div class="portfolio-popup-thumbnail">
+                        <div class="image">
+                          <img class="w-100" src="public/images/portfolio/ace.jpg" alt="slide" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="text-content">
+                        <h3><span>Featured - Php</span> Web-Development</h3>
+                        <p class="mb--30">
+                          A sports company where matches are being drafted and
+                          players also drafted
+                        </p>
+                        <div class="button-group mt--20">
+                          <a href="#" class="rn-btn thumbs-icon">
+                            <div class="myotherdiv">Personal Project</div>
+                            <!-- <i data-feather="thumbs-up"></i> -->
+                          </a>
+                          <a href="https://github.com/scarface1129/Ace" class="rn-btn" target="_blank">
+                            <span>VIEW PROJECT</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="feather feather-chevron-right">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End of .text-content -->
+                    </div>
+                  </div>
+                  <!-- End of .row Body-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="Fake-Product-Identification-System" tabindex="-1" role="dialog"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <div class="portfolio-popup-thumbnail">
+                        <div class="image">
+                          <img class="w-100" src="public/images/portfolio/fpis.jpg" alt="slide" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="text-content">
+                        <h3>
+                          <span>Featured - Django</span> Web Development
+                        </h3>
+                        <p class="mb--30">
+                          This is a software solution that helps businesses
+                          and consumers verify the authenticity of products in
+                          the market. It does this by analyzing unique product
+                          codes and comparing them against a database of known
+                          genuine codes through scanning of a QR code.
+                        </p>
+                        <div class="button-group mt--20">
+                          <a href="#" class="rn-btn thumbs-icon">
+                            <div class="myotherdiv">Personal Project</div>
+                            <!-- <i data-feather="thumbs-up"></i> -->
+                          </a>
+                          <a href="https://github.com/scarface1129/Fake_Product_Identification_System" class="rn-btn"
+                            target="_blank">
+                            <span>VIEW PROJECT</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="feather feather-chevron-right">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End of .text-content -->
+                    </div>
+                  </div>
+                  <!-- End of .row Body-->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="Financial-Trade-Mangament" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg></span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="row align-items-center">
+                    <div class="col-lg-6">
+                      <div class="portfolio-popup-thumbnail">
+                        <div class="image">
+                          <img class="w-100" src="public/images/portfolio/ftm.jpg" alt="slide" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                      <div class="text-content">
+                        <h3><span>Featured - Php</span> Web Development</h3>
+                        <p class="mb--30">Investment Company for bitcoin</p>
+                        <div class="button-group mt--20">
+                          <a href="#" class="rn-btn thumbs-icon">
+                            <div class="myotherdiv">Personal Project</div>
+                            <!-- <i data-feather="thumbs-up"></i> -->
+                          </a>
+                          <a href="https://github.com/scarface1129/FTM" class="rn-btn" target="_blank">
+                            <span>VIEW PROJECT</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                              stroke-linejoin="round" class="feather feather-chevron-right">
+                              <polyline points="9 18 15 12 9 6"></polyline>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!-- End of .text-content -->
+                    </div>
+                  </div>
+                  <!-- End of .row Body-->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- End Single Portfolio -->
+        </div>
+      </div>
+    </div>
+    <!-- End portfolio Area -->
+    <!-- Start Resume Area -->
+    <div class="rn-resume-area rn-section-gap section-separator" id="resume">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title text-center">
+              <span class="subtitle">3+ Years of Experience</span>
+              <h2 class="title">My Resume</h2>
+            </div>
+          </div>
+        </div>
+        <div class="row mt--45">
+          <div class="col-lg-12">
+            <ul class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="education-tab" data-bs-toggle="tab" href="#education" role="tab"
+                  aria-controls="education" aria-selected="true">education / Job Experience
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="professional-tab" data-bs-toggle="tab" href="#professional" role="tab"
+                  aria-controls="professional" aria-selected="false">professional Skills</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link" id="interview-tab" data-bs-toggle="tab" href="#interview" role="tab"
+                  aria-controls="interview" aria-selected="false">interview</a>
+              </li>
+            </ul>
+
+            <!-- Start Tab Content Wrapper  -->
+            <div class="rn-nav-content tab-content" id="myTabContents">
+              <!-- Start Single Tab  -->
+              <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel"
+                aria-labelledby="education-tab">
+                <div class="personal-experience-inner mt--40">
+                  <div class="row">
+                    <!-- Start Skill List Area  -->
+                    <div class="col-lg-6 col-md-12 col-12">
+                      <div class="content">
+                        <!-- <span class="subtitle">2007 - 2010</span> -->
+                        <h4 class="maintitle">Education Quality</h4>
+                        <div class="experience-list">
+                          <!-- Start Single List  -->
+                          <div class="resume-single-list">
+                            <div class="inner">
+                              <div class="heading">
+                                <div class="title">
+                                  <h4>
+                                    WAEC Certificate And NECO certificate
+                                  </h4>
+                                  <span>St. Augustines Seminary Ezzamgbo</span>
+                                </div>
+                                <div class="date-of-time">
+                                  <span>Distinction</span>
+                                </div>
+                              </div>
+                              <p class="description">
+
+                              </p>
+                            </div>
+                          </div>
+                          <!-- End Single List  -->
+                          <!-- Start Single List  -->
+                          <div class="resume-single-list">
+                            <div class="inner">
+                              <div class="heading">
+                                <div class="title">
+                                  <h4>BSC Certificate</h4>
+                                  <span>Nnamdi Azikiwe University Awka Anambra
+                                    State Nigeria</span>
+                                </div>
+                                <div class="date-of-time">
+                                  <span>4.56</span>
+                                </div>
+                              </div>
+                              <p class="description">
+
+                              </p>
+                            </div>
+                          </div>
+                          <!-- End Single List  -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Skill List Area  -->
+
+                    <!-- Start Skill List Area 2nd  -->
+                    <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
+                      <div class="content">
+                        <!-- <span class="subtitle">2007 - 2010</span> -->
+                        <h4 class="maintitle">Job Experience</h4>
+                        <div class="experience-list">
+                          <!-- Start Single List  -->
+                          <div class="resume-single-list">
+                            <div class="inner">
+                              <div class="heading">
+                                <div class="title">
+                                  <h4>internship</h4>
+                                  <span>Techo Craft IT Company Enugu Nigeria (4
+                                    October 2021-27 January 2022)</span>
+                                </div>
+                                <!-- <div class="date-of-time">
+                                                                    <span>4.70/5</span>
+                                                                </div> -->
+                              </div>
+                              <p class="description">
+                                •Collaborated with other interns and other
+                                staffs to achieve quality client goals.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- End Single List  -->
+                          <!-- Start Single List  -->
+                          <div class="resume-single-list">
+                            <div class="inner">
+                              <div class="heading">
+                                <div class="title">
+                                  <h4>Junior Developer</h4>
+                                  <span>Iceztech Company Awka Anambra State (22
+                                    January 2022-date)</span>
+                                </div>
+                                <!-- <div class="date-of-time">
+                                                                    <span>4.70/5</span>
+                                                                </div> -->
+                              </div>
+                              <p class="description">
+                                •Collaborated with other developers and staffs
+                                to achieve quality client goals.
+                              </p>
+                            </div>
+                          </div>
+                          <!-- End Single List  -->
+                        </div>
+                      </div>
+                    </div>
+                    <!-- End Skill List Area  -->
+                  </div>
+                </div>
+              </div>
+              <!-- End Single Tab  -->
+
+              <!-- Start Single Tab  -->
+              <div class="tab-pane fade" id="professional" role="tabpanel" aria-labelledby="professional-tab">
+                <div class="personal-experience-inner mt--40">
+                  <div class="row row--40">
+                    <!-- Start Single Progressbar  -->
+                    <div class="container col-lg-8 col-md-8 col-12">
+                      <div class="progress-wrapper">
+                        <div class="content">
+                          <span class="subtitle">Features</span>
+                          <h4 class="maintitle">Development Skill</h4>
+                          <!-- Start Single Progress Charts -->
+                          <div class="progress-charts">
+                            <h6 class="heading heading-h6">django</h6>
+                            <div class="progress">
+                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
+                                role="progressbar" style="
                                     width: 80%;
                                     visibility: hidden;
                                     animation-duration: 0.5s;
                                     animation-delay: 0.3s;
                                     animation-name: none;
-                                  "
-                                  aria-valuenow="85"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  <span class="percent-label">80%</span>
-                                </div>
+                                  " aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <span class="percent-label">80%</span>
                               </div>
                             </div>
-                            <div class="progress-charts">
-                              <h6 class="heading heading-h6">Javascript</h6>
-                              <div class="progress">
-                                <div
-                                  class="progress-bar wow fadeInLeft"
-                                  data-wow-duration="0.5s"
-                                  data-wow-delay=".3s"
-                                  role="progressbar"
-                                  style="
+                          </div>
+                          <div class="progress-charts">
+                            <h6 class="heading heading-h6">Javascript</h6>
+                            <div class="progress">
+                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
+                                role="progressbar" style="
                                     width: 50%;
                                     visibility: hidden;
                                     animation-duration: 0.5s;
                                     animation-delay: 0.3s;
                                     animation-name: none;
-                                  "
-                                  aria-valuenow="85"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  <span class="percent-label">50%</span>
-                                </div>
+                                  " aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <span class="percent-label">50%</span>
                               </div>
                             </div>
-                            <div class="progress-charts">
-                              <h6 class="heading heading-h6">laravel</h6>
-                              <div class="progress">
-                                <div
-                                  class="progress-bar wow fadeInLeft"
-                                  data-wow-duration="0.5s"
-                                  data-wow-delay=".3s"
-                                  role="progressbar"
-                                  style="
+                          </div>
+                          <div class="progress-charts">
+                            <h6 class="heading heading-h6">laravel</h6>
+                            <div class="progress">
+                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
+                                role="progressbar" style="
                                     width: 80%;
                                     visibility: hidden;
                                     animation-duration: 0.5s;
                                     animation-delay: 0.3s;
                                     animation-name: none;
-                                  "
-                                  aria-valuenow="85"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  <span class="percent-label">80%</span>
-                                </div>
+                                  " aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <span class="percent-label">80%</span>
                               </div>
                             </div>
-                            <div class="progress-charts">
-                              <h6 class="heading heading-h6">PHP</h6>
-                              <div class="progress">
-                                <div
-                                  class="progress-bar wow fadeInLeft"
-                                  data-wow-duration="0.5s"
-                                  data-wow-delay=".3s"
-                                  role="progressbar"
-                                  style="
+                          </div>
+                          <div class="progress-charts">
+                            <h6 class="heading heading-h6">PHP</h6>
+                            <div class="progress">
+                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
+                                role="progressbar" style="
                                     width: 70%;
                                     visibility: hidden;
                                     animation-duration: 0.5s;
                                     animation-delay: 0.3s;
                                     animation-name: none;
-                                  "
-                                  aria-valuenow="85"
-                                  aria-valuemin="0"
-                                  aria-valuemax="100"
-                                >
-                                  <span class="percent-label">70%</span>
-                                </div>
+                                  " aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                                <span class="percent-label">70%</span>
                               </div>
                             </div>
-                            <!-- End Single Progress Charts -->
                           </div>
+                          <!-- End Single Progress Charts -->
                         </div>
                       </div>
-                      <!-- End Single Progressbar  -->
-
-                      <!-- Start Single Progressbar  -->
-
-                      <!-- End Single Progressbar  -->
                     </div>
+                    <!-- End Single Progressbar  -->
+
+                    <!-- Start Single Progressbar  -->
+
+                    <!-- End Single Progressbar  -->
                   </div>
                 </div>
-                <!-- End Single Tab  -->
+              </div>
+              <!-- End Single Tab  -->
 
-                <!-- Start Single Tab  -->
-                <div
-                  class="tab-pane fade"
-                  id="interview"
-                  role="tabpanel"
-                  aria-labelledby="interview-tab"
-                >
-                  <div class="personal-experience-inner mt--40">
-                    <div class="row">
-                      <!-- Start Skill List Area  -->
-                      <div class="container col-lg-8 col-md-12 col-12">
-                        <div class="content">
-                          <!-- <span class="subtitle">2007 - 2010</span> -->
-                          <h4 class="maintitle">Company Interviews</h4>
-                          <div class="experience-list">
-                            <!-- Start Single List  -->
+              <!-- Start Single Tab  -->
+              <div class="tab-pane fade" id="interview" role="tabpanel" aria-labelledby="interview-tab">
+                <div class="personal-experience-inner mt--40">
+                  <div class="row">
+                    <!-- Start Skill List Area  -->
+                    <div class="container col-lg-8 col-md-12 col-12">
+                      <div class="content">
+                        <!-- <span class="subtitle">2007 - 2010</span> -->
+                        <h4 class="maintitle">Company Interviews</h4>
+                        <div class="experience-list">
+                          <!-- Start Single List  -->
 
-                            <!-- End Single List  -->
+                          <!-- End Single List  -->
 
-                            <!-- Start Single List  -->
+                          <!-- Start Single List  -->
 
-                            <!-- End Single List  -->
+                          <!-- End Single List  -->
 
-                            <!-- Start Single List  -->
+                          <!-- Start Single List  -->
 
-                            <!-- End Single List  -->
-                          </div>
+                          <!-- End Single List  -->
                         </div>
                       </div>
-                      <!-- End Skill List Area  -->
-
-                      <!-- Start Skill List Area 2nd  -->
-
-                      <!-- End Skill List Area  -->
                     </div>
+                    <!-- End Skill List Area  -->
+
+                    <!-- Start Skill List Area 2nd  -->
+
+                    <!-- End Skill List Area  -->
                   </div>
                 </div>
-                <!-- End Single Tab  -->
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        class="rn-contact-area rn-section-gap section-separator"
-        id="contacts"
-      >
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="section-title text-center">
-                <span class="subtitle">Contact</span>
-                <h2 class="title">Contact With Me</h2>
-              </div>
-            </div>
-          </div>
-
-          <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
-            <div class="col-lg-8 container">
-              <div class="contact-about-area">
-                <div class="thumbnail">
-                  <img
-                    src="public/images/contact/contact1.png"
-                    alt="contact-img"
-                  />
-                </div>
-                <div class="title-area">
-                  <h4 class="title">Agbo Emmanuel ThankGod</h4>
-                  <span>Backend Developer</span>
-                </div>
-                <div class="description">
-                  <p>
-                    I am available. Connect with me via email, Whatsapp,Linkedin, or call in to my
-                    account.
-                  </p>
-                  <span class="phone"
-                    >Phone: <a href="https://wa.link/exmv4k" target='_blank'>07085427519</a></span
-                  >
-                  <span class="mail"
-                    >Email:
-                    <a href="mailto:agboemmanuel002@gmail.com" target='_blank'
-                       >agboemmanuel002@gmail.com</a
-                    ></span
-                  >
-                <span class="mail"
-                    >Linkedin:
-                    <a href="https://www.linkedin.com/in/emmanuel-agbo-906732231" target='_blank'
-                      >Emmanuel Agbo</a
-                    ></span
-                  >
-                <span class="mail"
-                    >Github:
-                    <a href="http://github.com/scarface1129" target='_blank'
-                      >scarface1129</a
-                    ></span
-                  >
-                </div>
-                
-              </div>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-      <!-- End Contuct section -->
-      <!-- Modal Portfolio Body area Start -->
-
-      <!-- End Modal Portfolio area -->
-      <!-- Modal Blog Body area Start -->
-      <div
-        class="modal fade"
-        id="exampleModalCenters"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-dialog-centered modal-news"
-          role="document"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="feather feather-x"
-                  >
-                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                    <line x1="6" y1="6" x2="18" y2="18"></line></svg
-                ></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Modal Blog area -->
-      <!-- Back to  top Start -->
-      <div class="backto-top" style="opacity: 1">
-        <div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            class="feather feather-arrow-up"
-          >
-            <line x1="12" y1="19" x2="12" y2="5"></line>
-            <polyline points="5 12 12 5 19 12"></polyline>
-          </svg>
-        </div>
-      </div>
-      <!-- Back to top end -->
-      <!-- Start Right Demo  -->
-    </main>
-    <!-- Start Footer Area -->
-    <div class="rn-footer-area rn-section-gap section-separator">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="footer-area text-center">
-              <p class="description mt--30">
-                © 2023. All rights reserved by
-                <a target="_blank" href="">Agbo Emmannuel ThankGod.</a>
-              </p>
+              <!-- End Single Tab  -->
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- End Footer Area -->
-    <!-- JS ============================================ -->
-    <script src="public/js/vendor/jquery.js"></script>
-    <script>
-      $(function () {
-        setTimeout(function () {
-          $(".handle").fadeOut(1500);
-        }, 2500);
-      });
-    </script>
-    <script src="public/js/vendor/modernizer.min.js"></script>
-    <script src="public/js/vendor/feather.min.js"></script>
-    <script src="public/js/vendor/slick.min.js"></script>
-    <script src="public/js/vendor/bootstrap.js"></script>
-    <script src="public/js/vendor/text-type.js"></script>
-    <script src="public/js/vendor/wow.js"></script>
-    <script src="public/js/vendor/aos.js"></script>
-    <script src="public/js/vendor/particles.js"></script>
-    <script src="public/js/vendor/jquery-one-page-nav.js"></script>
-    <!-- main JS -->
-    <script src="public/js/main.js"></script>
+    <div class="rn-contact-area rn-section-gap section-separator" id="contacts">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-title text-center">
+              <span class="subtitle">Contact</span>
+              <h2 class="title">Contact With Me</h2>
+            </div>
+          </div>
+        </div>
 
-    <quillbot-extension-portal></quillbot-extension-portal>
-  </body>
-  <quillbot-extension-root></quillbot-extension-root
-  ><grammarly-desktop-integration
-    data-grammarly-shadow-root="true"
-  ></grammarly-desktop-integration>
+        <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
+          <div class="col-lg-8 container">
+            <div class="contact-about-area">
+              <div class="thumbnail">
+                <img src="public/images/contact/contact1.png" alt="contact-img" />
+              </div>
+              <div class="title-area">
+                <h4 class="title">Agbo Emmanuel ThankGod</h4>
+                <span>Backend Developer</span>
+              </div>
+              <div class="description">
+                <p>
+                  I am available. Connect with me via email, Whatsapp,Linkedin, or call in to my
+                  account.
+                </p>
+                <span class="phone">Phone: <a href="https://wa.link/exmv4k" target='_blank'>07085427519</a></span>
+                <span class="mail">Email:
+                  <a href="mailto:agboemmanuel002@gmail.com" target='_blank'>agboemmanuel002@gmail.com</a></span>
+                <span class="mail">Linkedin:
+                  <a href="https://www.linkedin.com/in/emmanuel-agbo-906732231" target='_blank'>Emmanuel Agbo</a></span>
+                <span class="mail">Github:
+                  <a href="http://github.com/scarface1129" target='_blank'>scarface1129</a></span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <!-- End Contuct section -->
+    <!-- Modal Portfolio Body area Start -->
+
+    <!-- End Modal Portfolio area -->
+    <!-- Modal Blog Body area Start -->
+    <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-news" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" class="feather feather-x">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Modal Blog area -->
+    <!-- Back to  top Start -->
+    <div class="backto-top" style="opacity: 1">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="feather feather-arrow-up">
+          <line x1="12" y1="19" x2="12" y2="5"></line>
+          <polyline points="5 12 12 5 19 12"></polyline>
+        </svg>
+      </div>
+    </div>
+    <!-- Back to top end -->
+    <!-- Start Right Demo  -->
+  </main>
+  <!-- Start Footer Area -->
+  <div class="rn-footer-area rn-section-gap section-separator">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-area text-center">
+            <p class="description mt--30">
+              © 2023. All rights reserved by
+              <a target="_blank" href="">Agbo Emmannuel ThankGod.</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- End Footer Area -->
+  <!-- JS ============================================ -->
+  <script src="public/js/vendor/jquery.js"></script>
+  <script>
+    $(function () {
+      setTimeout(function () {
+        $(".handle").fadeOut(1500);
+      }, 2500);
+    });
+  </script>
+  <script src="public/js/vendor/modernizer.min.js"></script>
+  <script src="public/js/vendor/feather.min.js"></script>
+  <script src="public/js/vendor/slick.min.js"></script>
+  <script src="public/js/vendor/bootstrap.js"></script>
+  <script src="public/js/vendor/text-type.js"></script>
+  <script src="public/js/vendor/wow.js"></script>
+  <script src="public/js/vendor/aos.js"></script>
+  <script src="public/js/vendor/particles.js"></script>
+  <script src="public/js/vendor/jquery-one-page-nav.js"></script>
+  <!-- main JS -->
+  <script src="public/js/main.js"></script>
+
+  <quillbot-extension-portal></quillbot-extension-portal>
+</body>
+<quillbot-extension-root></quillbot-extension-root><grammarly-desktop-integration
+  data-grammarly-shadow-root="true"></grammarly-desktop-integration>
+
 </html>
