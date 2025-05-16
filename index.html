@@ -1,1868 +1,994 @@
-<html lang="en"
-  class="sizes customelements history pointerevents postmessage webgl websockets cssanimations csscolumns csscolumns-width csscolumns-span csscolumns-fill csscolumns-gap csscolumns-rule csscolumns-rulecolor csscolumns-rulestyle csscolumns-rulewidth csscolumns-breakbefore csscolumns-breakafter csscolumns-breakinside flexbox picture srcset webworkers">
-<div id="in-page-channel-node-id" data-channel-name="in_page_channel_rEOFAP"></div>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <title>Personal Portfolio</title>
-  <meta name="robots" content="noindex, follow" />
-  <meta name="description" content="" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Favicon -->
-  <link rel="shortcut icon" type="image/x-icon" href="public/images/logo/logo1.png" />
-  <!-- CSS 
-    ============================================ -->
-  <link rel="stylesheet" href="public/css/vendor/bootstrap.min.css" />
-  <link rel="stylesheet" href="public/css/vendor/slick.css" />
-  <link rel="stylesheet" href="public/css/vendor/slick-theme.css" />
-  <link rel="stylesheet" href="public/css/vendor/aos.css" />
-  <link rel="stylesheet" href="public/css/plugins/feature.css" />
-  <!-- Style css -->
-  <link rel="stylesheet" href="public/css/style.css" />
-  <style type="text/css">
-    .lf-progress {
-      -webkit-appearance: none;
-      -moz-apperance: none;
-      width: 100%;
-      /* margin: 0 10px; */
-      height: 4px;
-      border-radius: 3px;
-      cursor: pointer;
-    }
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Agbo Emmanuel ThankGod</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    .lf-progress:focus {
-      outline: none;
-      border: none;
-    }
+  <!-- Favicons -->
+  <link href="assets/img/logo.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    .lf-progress::-moz-range-track {
-      cursor: pointer;
-      background: none;
-      border: none;
-      outline: none;
-    }
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    .lf-progress::-webkit-slider-thumb {
-      -webkit-appearance: none !important;
-      height: 13px;
-      width: 13px;
-      border: 0;
-      border-radius: 50%;
-      background: #0fccce;
-      cursor: pointer;
-    }
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    .lf-progress::-moz-range-thumb {
-      -moz-appearance: none !important;
-      height: 13px;
-      width: 13px;
-      border: 0;
-      border-radius: 50%;
-      background: #0fccce;
-      cursor: pointer;
-    }
-
-    .lf-progress::-ms-track {
-      width: 100%;
-      height: 3px;
-      cursor: pointer;
-      background: transparent;
-      border-color: transparent;
-      color: transparent;
-    }
-
-    .lf-progress::-ms-fill-lower {
-      background: #ccc;
-      border-radius: 3px;
-    }
-
-    .lf-progress::-ms-fill-upper {
-      background: #ccc;
-      border-radius: 3px;
-    }
-
-    .lf-progress::-ms-thumb {
-      border: 0;
-      height: 15px;
-      width: 15px;
-      border-radius: 50%;
-      background: #0fccce;
-      cursor: pointer;
-    }
-
-    .lf-progress:focus::-ms-fill-lower {
-      background: #ccc;
-    }
-
-    .lf-progress:focus::-ms-fill-upper {
-      background: #ccc;
-    }
-
-    .lf-player-container :focus {
-      outline: 0;
-    }
-
-    .lf-popover {
-      position: relative;
-    }
-
-    .lf-popover-content {
-      display: inline-block;
-      position: absolute;
-      opacity: 1;
-      visibility: visible;
-      transform: translate(0, -10px);
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-      transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
-    }
-
-    .lf-popover-content.hidden {
-      opacity: 0;
-      visibility: hidden;
-      transform: translate(0, 0px);
-    }
-
-    .lf-player-btn-container {
-      display: flex;
-      align-items: center;
-    }
-
-    .lf-player-btn {
-      cursor: pointer;
-      fill: #999;
-      width: 14px;
-    }
-
-    .lf-player-btn.active {
-      fill: #555;
-    }
-
-    .lf-popover {
-      position: relative;
-    }
-
-    .lf-popover-content {
-      display: inline-block;
-      position: absolute;
-      background-color: #ffffff;
-      opacity: 1;
-
-      transform: translate(0, -10px);
-      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
-      transition: all 0.3s cubic-bezier(0.75, -0.02, 0.2, 0.97);
-      padding: 10px;
-    }
-
-    .lf-popover-content.hidden {
-      opacity: 0;
-      visibility: hidden;
-      transform: translate(0, 0px);
-    }
-
-    .lf-arrow {
-      position: absolute;
-      z-index: -1;
-      content: "";
-      bottom: -9px;
-      border-style: solid;
-      border-width: 10px 10px 0px 10px;
-    }
-
-    .lf-left-align,
-    .lf-left-align .lfarrow {
-      left: 0;
-      right: unset;
-    }
-
-    .lf-right-align,
-    .lf-right-align .lf-arrow {
-      right: 0;
-      left: unset;
-    }
-
-    .lf-text-input {
-      border: 1px #ccc solid;
-      border-radius: 5px;
-      padding: 3px;
-      width: 60px;
-      margin: 0;
-    }
-
-    .lf-color-picker {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      height: 90px;
-    }
-
-    .lf-color-selectors {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-
-    .lf-color-component {
-      display: flex;
-      flex-direction: row;
-      font-size: 12px;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .lf-color-component strong {
-      width: 40px;
-    }
-
-    .lf-color-component input[type="range"] {
-      margin: 0 0 0 10px;
-    }
-
-    .lf-color-component input[type="number"] {
-      width: 50px;
-      margin: 0 0 0 10px;
-    }
-
-    .lf-color-preview {
-      font-size: 12px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      padding-left: 5px;
-    }
-
-    .lf-preview {
-      height: 60px;
-      width: 60px;
-    }
-
-    .lf-popover-snapshot {
-      width: 150px;
-    }
-
-    .lf-popover-snapshot h5 {
-      margin: 5px 0 10px 0;
-      font-size: 0.75rem;
-    }
-
-    .lf-popover-snapshot a {
-      display: block;
-      text-decoration: none;
-    }
-
-    .lf-popover-snapshot a:before {
-      content: "⥼";
-      margin-right: 5px;
-    }
-
-    .lf-popover-snapshot .lf-note {
-      display: block;
-      margin-top: 10px;
-      color: #999;
-    }
-
-    .lf-player-controls>div {
-      margin-right: 5px;
-      margin-left: 5px;
-    }
-
-    .lf-player-controls>div:first-child {
-      margin-left: 0px;
-    }
-
-    .lf-player-controls>div:last-child {
-      margin-right: 0px;
-    }
-  </style>
-  <style id="_goober">
-    @keyframes go2264125279 {
-      from {
-        transform: scale(0) rotate(45deg);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1) rotate(45deg);
-        opacity: 1;
-      }
-    }
-
-    @keyframes go3020080000 {
-      from {
-        transform: scale(0);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    @keyframes go463499852 {
-      from {
-        transform: scale(0) rotate(90deg);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1) rotate(90deg);
-        opacity: 1;
-      }
-    }
-
-    @keyframes go1268368563 {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    @keyframes go1310225428 {
-      from {
-        transform: scale(0) rotate(45deg);
-        opacity: 0;
-      }
-
-      to {
-        transform: scale(1) rotate(45deg);
-        opacity: 1;
-      }
-    }
-
-    @keyframes go651618207 {
-      0% {
-        height: 0;
-        width: 0;
-        opacity: 0;
-      }
-
-      40% {
-        height: 0;
-        width: 6px;
-        opacity: 1;
-      }
-
-      100% {
-        opacity: 1;
-        height: 10px;
-      }
-    }
-
-    @keyframes go901347462 {
-      from {
-        transform: scale(0.6);
-        opacity: 0.4;
-      }
-
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    .go4109123758 {
-      z-index: 9999;
-    }
-
-    .go4109123758>* {
-      pointer-events: auto;
-    }
-  </style>
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 </head>
 
-<body class="template-color-1 spybody" data-spy="scroll" data-target=".navbar-example2" data-offset="70"
-  data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" data-new-gr-c-s-check-loaded="14.1111.0"
-  data-gr-ext-installed="">
-  <!-- Start Header -->
-  <header class="rn-header haeder-default black-logo-version header--fixed header--sticky sticky">
-    <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
-      <!-- Start Header Left -->
-      <div class="col-lg-2 col-6">
-        <div class="header-left">
-          <div class="logo">
-            <a href="#">
-              <h5 style="color: black">AGBO</h5>
-              <!-- <img src="public/images/logo/logo.JPG" alt="logo"> -->
-            </a>
-          </div>
-        </div>
-      </div>
+<body class="index-page">
 
-      <!-- End Header Left -->
-      <!-- Start Header Center -->
-      <div class="col-lg-10 col-6">
-        <div class="header-center">
-          <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
-            <!-- Start Mainmanu Nav -->
-            <ul class="primary-menu nav nav-pills">
-              <li class="nav-item">
-                <a class="nav-link" href="#home">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#portfolio">Portfolio</a>
-              </li>
-              <li class="nav-item current">
-                <a class="nav-link" href="#resume">Resume</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contacts">Contact</a>
-              </li>
-            </ul>
-            <!-- End Mainmanu Nav -->
-          </nav>
-          <!-- Start Header Right  -->
-          <div class="header-right">
-            <div class="hamberger-menu d-block d-xl-none">
-              <i id="menuBtn" class="feather-menu humberger-menu"></i>
-            </div>
-            <div class="close-menu d-block">
-              <span class="closeTrigger">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-x">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg>
-              </span>
-            </div>
-          </div>
-          <!-- End Header Right  -->
-        </div>
-      </div>
-      <!-- End Header Center -->
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/my-profile-img.png" alt="" class="img-fluid rounded-circle">
     </div>
-  </header>
-  <!-- End Header Area -->
-  <!-- Start Popup Mobile Menu  -->
-  <div class="popup-mobile-menu">
-    <div class="inner">
-      <div class="menu-top">
-        <div class="menu-header">
-          <a class="logo" href="#">
-            Agbo Emmanuel
-            <!-- <img src="" alt="Agbo Emmanuel"> -->
-          </a>
-          <div class="close-button">
-            <button class="close-menu-activation close">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                class="feather feather-x">
-                <line x1="18" y1="6" x2="6" y2="18"></line>
-                <line x1="6" y1="6" x2="18" y2="18"></line>
-              </svg>
-            </button>
-          </div>
-        </div>
-        <p class="discription">A Dedicated Software Developers</p>
-      </div>
-      <div class="content">
-        <ul class="primary-menu nav nav-pills onepagenav">
-          <li class="nav-item">
-            <a class="nav-link smoth-animation active" href="#home">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link smoth-animation" href="#portfolio">Portfolio</a>
-          </li>
-          <li class="nav-item current">
-            <a class="nav-link smoth-animation" href="#resume">Resume</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link smoth-animation" href="#testimonial">Clients</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link smoth-animation" href="#contacts">Contact</a>
-          </li>
-        </ul>
-        <!-- social sharea area -->
-        <div class="social-share-style-1 mt--40">
-          <span class="title">find with me</span>
-          <ul class="social-share d-flex liststyle">
-            <li class="facebook">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-facebook">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                </svg></a>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <!-- Uncomment the line below if you also wish to use an image logo -->
+      <img src="assets/img/logo.png" alt="">
+      <h1 class="sitename">Agbo Emmanuel</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <!-- <a href="#" target="_blank" class="twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a> -->
+      <a href="https://www.instagram.com/alexscar0/profilecard/?igsh=MTlhN3hlaXgwcTlzeQ==" target="_blank"
+        class="instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://wa.link/ota25j" target="_blank" class="google-plus"><i class="bi bi-whatsapp"></i></a>
+      <a href="https://www.linkedin.com/in/emmanuel-agbo-906732231/" target="_blank" class="linkedin"><i
+          class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#skills"><i class="bi bi-menu-button navicon"></i> Skills</a></li>
+        <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <!-- <li class="dropdown"><a href="#"><i class="bi bi-menu-button navicon"></i> <span>Dropdown</span> <i
+              class="bi bi-chevron-down toggle-dropdown"></i></a>
+          <ul>
+            <li><a href="#">Dropdown 1</a></li>
+            <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i
+                  class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="#">Deep Dropdown 1</a></li>
+                <li><a href="#">Deep Dropdown 2</a></li>
+                <li><a href="#">Deep Dropdown 3</a></li>
+                <li><a href="#">Deep Dropdown 4</a></li>
+                <li><a href="#">Deep Dropdown 5</a></li>
+              </ul>
             </li>
-            <li class="instagram">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-instagram">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                </svg></a>
-            </li>
-            <li class="linkedin">
-              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-linkedin">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg></a>
-            </li>
+            <li><a href="#">Dropdown 2</a></li>
+            <li><a href="#">Dropdown 3</a></li>
+            <li><a href="#">Dropdown 4</a></li>
           </ul>
-        </div>
-        <!-- end -->
+        </li> -->
+        <li><a href="#contact"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <img src="assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Emmanuel</h2>
+        <p>I'm a <span class="typed"
+            data-typed-items="Backend Developer, Copywriter, Laravel Specialist, Freelancer">Backend
+            Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span
+            class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
       </div>
-    </div>
-  </div>
-  <!-- End Popup Mobile Menu  -->
 
-  <main class="main-page-wrapper">
-    <!-- Start Slider Area -->
-    <div id="home" class="rn-slider-area">
-      <div class="slide slider-style-1">
-        <div class="container">
-          <div class="row row--30 align-items-center">
-            <div class="order-1 order-lg-1 col-lg-5">
-              <div class="thumbnail">
-                <div class="inner">
-                  <img src="public/images/slider/banner-02.png" alt="Personal Portfolio Images" />
-                </div>
-              </div>
-            </div>
+    </section><!-- /Hero Section -->
 
-            <div class="order-2 order-lg-2 col-lg-7 mt_md--50 mt_sm--50 mt_lg--30">
-              <div class="content">
-                <div class="inner">
-                  <span class="subtitle">Welcome to my World</span>
-                  <h1 class="title">
-                    Hi, I’m <span>Agbo Emmanuel ThankGod</span><br />
-                    <span class="header-caption" id="page-top">
-                      <!-- type headline start-->
-                      <span class="cd-headline clip is-full-width">
-                        <!-- <span style="font-size: 30px">a </span> -->
-                        <!-- ROTATING TEXT -->
-                        <span class="cd-words-wrapper" style="width: 533.188px">
-                          <!-- <b class="is-hidden" style="font-size: 30px">Backend Web Developer(Django)</b> -->
-                          <b class="is-visible" style="font-size: 30px">Backend Web Developer(Php Laravel)</b>
-                          <b class="is-hidden" style="font-size: 30px">Backend API Developer(Php Laravel)</b>
-                          <b class="is-hidden" style="font-size: 30px">Backend Web/API Developer(Beginner Nest JS)</b>
-                        </span>
-                      </span>
-                      <!-- type headline end -->
-                    </span>
-                  </h1>
+    <!-- About Section -->
+    <section id="about" class="about section">
 
-                  <div>
-                    <p class="description">
-                      I am a PHP Laravel developer with over four years of experience in web development. I have worked
-                      with a couple of companies, contributing to building scalable applications, and I have also
-                      completed several personal projects since my school days. My expertise lies in backend
-                      development, working with Laravel, database management, API development, and optimizing
-                      performance in web applications.
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>About</h2>
+        <p>I’m Emmanuel ThankGod Agbo, a backend engineer with over 4 years of experience building Laravel applications
+          that scale beautifully and communicate powerfully.
 
-                      I focus on improving my skills, working on projects that involve complex business logic, and
-                      collaborating with teams to deliver high-quality software solutions. I am passionate about writing
-                      clean, efficient, and maintainable code, and I always look for opportunities to grow and take on
-                      new challenges in the Laravel ecosystem.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          I combine strong backend architecture with tech writing that gets to the point — so your team, users, and even
+          non-technical stakeholders can understand exactly what your system does, and why it matters.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4 justify-content-center">
+          <div class="col-lg-4">
+            <img src="assets/img/my-profile-img2.png" class="img-fluid" alt="">
           </div>
-          <!-- <div class="row">
-                                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
-                                    <div class="social-share-inner-left">
-                                        <span class="title">find with me</span>
-                                        <ul class="social-share d-flex liststyle">
-                                            <li class="facebook"><a href="http:// scarffds@facebook.com"><i data-feather="facebook"></i></a>
-                                            </li>
-                                            <li class="instagram"><a href="http:// Scarff@instagram.com"><i data-feather="instagram"></i></a>
-                                            </li>
-                                            <li class="linkedin"><a href="http://scarfaec22@linkln.com"><i data-feather="linkedin"></i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12 mt_mobile--30">
-                                    <div class="skill-share-inner">
-                                        <span class="title">best skill on</span>
-                                        <ul class="skill-share d-flex liststyle">
-                                            <li><img src="public/images/icons/icons-01.png" alt="Icons Images"></li>
-                                            <li><img src="public/images/icons/icons-02.png" alt="Icons Images"></li>
-                                            <li><img src="public/images/icons/icons-03.png" alt="Icons Images"></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div> -->
-        </div>
-      </div>
-    </div>
-    <!-- End Slider Area -->
+          <div class="col-lg-8 content">
+            <h2>Web Developer &amp; Copywriter.</h2>
+            <p class="fst-italic py-3">
+              Build scalable web apps using Laravel with modern architectural patterns.
 
-    <!-- Start Portfolio Area -->
-    <div class="rn-portfolio-area rn-section-gap section-separator" id="portfolio">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title text-center">
-              <span class="subtitle">Visit my portfolio and keep your feedback</span>
-              <h2 class="title">My Portfolio</h2>
-            </div>
-          </div>
-        </div>
+              Integrate seamless payment systems across African fintech (Paystack, Flutterwave, Fincra, etc.).
 
-        <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
-          <!-- Start Single Portfolio -->
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#BusinessDesk">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/businessdesk.png" alt="BusinessDesk" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">BusinessDesk.Ng <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
+              Write conversion-driven documentation and copy — for devs, users, and decision-makers alike.
 
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#Syticks">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/Opera Snapshot_2025-04-19_014142_syticks.com.png" alt="Syticks" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">API/WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">Syticks <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#FusionApi">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/fusion-api.png" alt="Personal Portfolio Images" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">Fusion-API
-                      <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#RechargeProfit">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/rechargeprofit.png" alt="RechargeProfit" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">API/WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">RechargeProfit <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#TellaSport">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/tellasport.png" alt="TellaSport.com" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">WEB/API Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">TellaSport <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#BetslipSwitch">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/Screenshot 2023-09-01 082144.png"
-                      alt="Personal Portfolio Images" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">API/WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">BetslipSwitch <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#williams-academy">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/williams.png" alt="Personal Portfolio Images" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">Williams-Academy
-                      <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#Ace-Inc">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/ace.jpg" alt="Personal Portfolio Images" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">Ace-Inc <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#Fake-Product-Identification-System">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/fpis.jpg" alt="Personal Portfolio Images" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">Fake-Product-Identification-System
-                      <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div data-aos="fade-up" data-aos-delay="100" data-aos-once="true"
-            class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30 aos-init aos-animate">
-            <div class="rn-portfolio" data-bs-toggle="modal" data-bs-target="#Financial-Trade-Mangament">
-              <div class="inner">
-                <div class="thumbnail">
-                  <a href="javascript:void(0)">
-                    <img src="public/images/portfolio/ftm.jpg" alt="Personal Portfolio Images" />
-                  </a>
-                </div>
-                <div class="content">
-                  <div class="category-info">
-                    <div class="category-list">
-                      <a href="javascript:void(0)">WEB Development</a>
-                    </div>
-                    <div class="meta">
-                      <span><a href="javascript:void(0)"><i class="feather-heart"></i></a>
-                      </span>
-                    </div>
-                  </div>
-                  <h4 class="title">
-                    <a href="javascript:void(0)">Financial-Trade-Mangament
-                      <i class="feather-arrow-up-right"></i></a>
-                  </h4>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Modals -->
-          <div class="modal fade" id="BusinessDesk" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/businessdeskdetails.png" alt="syticks.com" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3>
-                          <span>Featured - Laravel</span> WEB Development
-                        </h3>
-                        <p class="mb--30">
-                          An Online Nigerian Business Certificate Website for CAC registeration and other different type
-                          of registration all dynamically customized by the Admins.
-                        </p>
-                        <div class="button-group mt--20">
-                          <a href="https://businessdesk.ng" class="rn-btn thumbs-icon" target="_blank">
-                            <div class="mydiv">Hosted Online</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="https://businessdesk.ng" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="Syticks" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/syticksdetails.png" alt="syticks.com" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3>
-                          <span>Featured - Laravel</span> WEB/API Development
-                        </h3>
-                        <p class="mb--30">
-                          An Online Ticketing System.
-                        </p>
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="mydiv">Hosted Online</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="https://syticks.com" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal fade" id="RechargeProfit" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/rechargeprofitdetails.png"
-                            alt="tellasport.com" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3>
-                          <span>Featured - Laravel</span> WEB/API Development
-                        </h3>
-                        <p class="mb--30">
-                          A website for Airtime, Data, Cable Tv, and Electricity bill payment.
-                        </p>
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="mydiv">Previously Hosted Online</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="#" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="TellaSport" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/tellasport_detail.png" alt="tellasport.com" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3>
-                          <span>Featured - Laravel</span> WEB/API Development
-                        </h3>
-                        <p class="mb--30">
-                          A website for converting sport betting codes from
-                          one bookie to another
-                        </p>
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="mydiv">Hosted Online</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="https://www.tellasport.com" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="modal fade" id="BetslipSwitch" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/betslipswitch.jpg" alt="slide" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3>
-                          <span>Featured - Laravel</span> Web Development
-                        </h3>
-                        <p class="mb--30">
-                          A website for converting sport betting codes from
-                          one bookie to another
-                        </p>
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="mydiv">Hosted Online</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="https://www.betslipswitch.com" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="FusionApi" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/fusion-api2.png" alt="slide" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3><span>Featured - PHP(Laravel)</span> Web Development</h3>
-                        <p class="mb--30">Fusion API – HR & Attendance Management Platform
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="myotherdiv">Company Project</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="#" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="williams-academy" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/williams.png" alt="slide" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3><span>Featured - Python(Django)</span> Web Development</h3>
-                        <p class="mb--30">Online Crypto and NFT Tutorial Website</p>
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="myotherdiv">Personal Project</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="https://github.com/scarface1129/Williams_Academy" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="Ace-Inc" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/ace.jpg" alt="slide" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3><span>Featured - Php</span> Web-Development</h3>
-                        <p class="mb--30">
-                          A sports company where matches are being drafted and
-                          players also drafted
-                        </p>
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="myotherdiv">Personal Project</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="https://github.com/scarface1129/Ace" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="Fake-Product-Identification-System" tabindex="-1" role="dialog"
-            aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/fpis.jpg" alt="slide" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3>
-                          <span>Featured - Django</span> Web Development
-                        </h3>
-                        <p class="mb--30">
-                          This is a software solution that helps businesses
-                          and consumers verify the authenticity of products in
-                          the market. It does this by analyzing unique product
-                          codes and comparing them against a database of known
-                          genuine codes through scanning of a QR code.
-                        </p>
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="myotherdiv">Personal Project</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="https://github.com/scarface1129/Fake_Product_Identification_System" class="rn-btn"
-                            target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="modal fade" id="Financial-Trade-Mangament" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-x">
-                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                      </svg></span>
-                  </button>
-                </div>
-                <div class="modal-body">
-                  <div class="row align-items-center">
-                    <div class="col-lg-6">
-                      <div class="portfolio-popup-thumbnail">
-                        <div class="image">
-                          <img class="w-100" src="public/images/portfolio/ftm.jpg" alt="slide" />
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="col-lg-6">
-                      <div class="text-content">
-                        <h3><span>Featured - Php</span> Web Development</h3>
-                        <p class="mb--30">Investment Company for bitcoin</p>
-                        <div class="button-group mt--20">
-                          <a href="#" class="rn-btn thumbs-icon">
-                            <div class="myotherdiv">Personal Project</div>
-                            <!-- <i data-feather="thumbs-up"></i> -->
-                          </a>
-                          <a href="https://github.com/scarface1129/FTM" class="rn-btn" target="_blank">
-                            <span>VIEW PROJECT</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                              fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                              stroke-linejoin="round" class="feather feather-chevron-right">
-                              <polyline points="9 18 15 12 9 6"></polyline>
-                            </svg>
-                          </a>
-                        </div>
-                      </div>
-                      <!-- End of .text-content -->
-                    </div>
-                  </div>
-                  <!-- End of .row Body-->
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- End Single Portfolio -->
-        </div>
-      </div>
-    </div>
-    <!-- End portfolio Area -->
-    <!-- Start Resume Area -->
-    <div class="rn-resume-area rn-section-gap section-separator" id="resume">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title text-center">
-              <span class="subtitle">4+ Years of Experience</span>
-              <h2 class="title">My Resume</h2>
-            </div>
-          </div>
-        </div>
-        <div class="row mt--45">
-          <div class="col-lg-12">
-            <ul class="rn-nav-list nav nav-tabs" id="myTabs" role="tablist">
-              <li class="nav-item">
-                <a class="nav-link active" id="education-tab" data-bs-toggle="tab" href="#education" role="tab"
-                  aria-controls="education" aria-selected="true">education / Job Experience
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" id="professional-tab" data-bs-toggle="tab" href="#professional" role="tab"
-                  aria-controls="professional" aria-selected="false">professional Skills</a>
-              </li>
-
-              <li class="nav-item">
-                <a class="nav-link" id="interview-tab" data-bs-toggle="tab" href="#interview" role="tab"
-                  aria-controls="interview" aria-selected="false">interview</a>
-              </li>
-            </ul>
-
-            <!-- Start Tab Content Wrapper  -->
-            <div class="rn-nav-content tab-content" id="myTabContents">
-              <!-- Start Single Tab  -->
-              <div class="tab-pane show active fade single-tab-area" id="education" role="tabpanel"
-                aria-labelledby="education-tab">
-                <div class="personal-experience-inner mt--40">
-                  <div class="row">
-                    <!-- Start Skill List Area  -->
-                    <div class="col-lg-6 col-md-12 col-12">
-                      <div class="content">
-                        <!-- <span class="subtitle">2007 - 2010</span> -->
-                        <h4 class="maintitle">Education Quality</h4>
-                        <div class="experience-list">
-                          <!-- Start Single List  -->
-                          <div class="resume-single-list">
-                            <div class="inner">
-                              <div class="heading">
-                                <div class="title">
-                                  <h4>
-                                    WAEC Certificate And NECO certificate
-                                  </h4>
-                                  <span>St. Augustines Seminary Ezzamgbo</span>
-                                </div>
-                                <div class="date-of-time">
-                                  <span>Distinction</span>
-                                </div>
-                              </div>
-                              <p class="description">
-
-                              </p>
-                            </div>
-                          </div>
-                          <!-- End Single List  -->
-                          <!-- Start Single List  -->
-                          <div class="resume-single-list">
-                            <div class="inner">
-                              <div class="heading">
-                                <div class="title">
-                                  <h4>BSC Certificate</h4>
-                                  <span>Nnamdi Azikiwe University Awka Anambra
-                                    State Nigeria</span>
-                                </div>
-                                <div class="date-of-time">
-                                  <span>4.56</span>
-                                </div>
-                              </div>
-                              <p class="description">
-
-                              </p>
-                            </div>
-                          </div>
-                          <!-- End Single List  -->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Skill List Area  -->
-
-                    <!-- Start Skill List Area 2nd  -->
-                    <div class="col-lg-6 col-md-12 col-12 mt_md--60 mt_sm--60">
-                      <div class="content">
-                        <h4 class="maintitle">Job Experience</h4>
-                        <div class="experience-list">
-
-                          <!-- Intern -->
-                          <div class="resume-single-list">
-                            <div class="inner">
-                              <div class="heading">
-                                <div class="title">
-                                  <h4>Intern</h4>
-                                  <span>Techo Craft IT Company, Enugu Nigeria (Oct 2021 – Jan 2022)</span>
-                                </div>
-                              </div>
-                              <p class="description">
-                                • Collaborated with other interns and staff to achieve quality client goals.
-                              </p>
-                            </div>
-                          </div>
-
-                          <!-- Junior Developer -->
-                          <div class="resume-single-list">
-                            <div class="inner">
-                              <div class="heading">
-                                <div class="title">
-                                  <h4>Junior Developer</h4>
-                                  <span>Iceztech Company, Awka Anambra State (Jan 2022 – Mar 2023)</span>
-                                </div>
-                              </div>
-                              <p class="description">
-                                • Collaborated with other developers and staff to achieve quality client goals.
-                              </p>
-                            </div>
-                          </div>
-
-                          <!-- Backend Laravel Developer - Swizel.co -->
-                          <div class="resume-single-list">
-                            <div class="inner">
-                              <div class="heading">
-                                <div class="title">
-                                  <h4>Backend Laravel Developer (Remote)</h4>
-                                  <span>Swizel.co, FCT Abuja Nigeria (Jan 2022 – Dec 2024)</span>
-                                </div>
-                              </div>
-                              <p class="description">
-                                • Optimized API performance by 30%, enhancing experience for 2,000+ daily users.<br>
-                                • Collaborated with cross-functional teams to deliver user-centric solutions.<br>
-                                • Participated in code reviews and debugging to ensure code quality.<br>
-                                • Stayed updated with latest technologies to improve project outcomes.
-                              </p>
-                            </div>
-                          </div>
-
-                          <!-- Backend Laravel Developer - Mksk Consulting -->
-                          <div class="resume-single-list">
-                            <div class="inner">
-                              <div class="heading">
-                                <div class="title">
-                                  <h4>Backend Laravel Developer (Contract - Remote)</h4>
-                                  <span>Mksk Consulting, London UK (Apr 2023 – Present)</span>
-                                </div>
-                              </div>
-                              <p class="description">
-                                • Led a team of 4 in developing and maintaining 3 large-scale Laravel apps.<br>
-                                • Designed scalable backend solutions and optimized API performance.<br>
-                                • Integrated third-party APIs and managed MySQL databases securely.<br>
-                                • Enhanced team productivity using Git and modern development practices.
-                              </p>
-                            </div>
-                          </div>
-
-                          <!-- NYSC Developer Role -->
-                          <div class="resume-single-list">
-                            <div class="inner">
-                              <div class="heading">
-                                <div class="title">
-                                  <h4>Software Developer (C#, .NET) - NYSC</h4>
-                                  <span>Alpha Beta Consulting (Feb 2024 – Jan 2025)</span>
-                                </div>
-                              </div>
-                              <p class="description">
-                                • Developed enterprise software solutions in C# and .NET.<br>
-                                • Supported ongoing software maintenance and enhancements.<br>
-                                • Collaborated in a hybrid work environment to meet agile goals.
-                              </p>
-                            </div>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- End Skill List Area  -->
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Tab  -->
-
-              <!-- Start Single Tab  -->
-              <div class="tab-pane fade" id="professional" role="tabpanel" aria-labelledby="professional-tab">
-                <div class="personal-experience-inner mt--40">
-                  <div class="row row--40">
-                    <!-- Start Single Progressbar  -->
-                    <div class="container col-lg-8 col-md-8 col-12">
-                      <div class="progress-wrapper">
-                        <div class="content">
-                          <span class="subtitle">Features</span>
-                          <h4 class="maintitle">Development Skill</h4>
-                          <!-- Start Single Progress Charts -->
-                          <div class="progress-charts">
-                            <h6 class="heading heading-h6">django</h6>
-                            <div class="progress">
-                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
-                                role="progressbar" style="
-                                    width: 50%;
-                                    visibility: hidden;
-                                    animation-duration: 0.5s;
-                                    animation-delay: 0.3s;
-                                    animation-name: none;
-                                  " aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                <span class="percent-label">50%</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="progress-charts">
-                            <h6 class="heading heading-h6">Javascript</h6>
-                            <div class="progress">
-                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
-                                role="progressbar" style="
-                                    width: 80%;
-                                    visibility: hidden;
-                                    animation-duration: 0.5s;
-                                    animation-delay: 0.3s;
-                                    animation-name: none;
-                                  " aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                <span class="percent-label">80%</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="progress-charts">
-                            <h6 class="heading heading-h6">laravel</h6>
-                            <div class="progress">
-                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
-                                role="progressbar" style="
-                                    width: 90%;
-                                    visibility: hidden;
-                                    animation-duration: 0.5s;
-                                    animation-delay: 0.3s;
-                                    animation-name: none;
-                                  " aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                <span class="percent-label">90%</span>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="progress-charts">
-                            <h6 class="heading heading-h6">PHP</h6>
-                            <div class="progress">
-                              <div class="progress-bar wow fadeInLeft" data-wow-duration="0.5s" data-wow-delay=".3s"
-                                role="progressbar" style="
-                                    width: 70%;
-                                    visibility: hidden;
-                                    animation-duration: 0.5s;
-                                    animation-delay: 0.3s;
-                                    animation-name: none;
-                                  " aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
-                                <span class="percent-label">70%</span>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- End Single Progress Charts -->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Single Progressbar  -->
-
-                    <!-- Start Single Progressbar  -->
-
-                    <!-- End Single Progressbar  -->
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Tab  -->
-
-              <!-- Start Single Tab  -->
-              <div class="tab-pane fade" id="interview" role="tabpanel" aria-labelledby="interview-tab">
-                <div class="personal-experience-inner mt--40">
-                  <div class="row">
-                    <!-- Start Skill List Area  -->
-                    <div class="container col-lg-8 col-md-12 col-12">
-                      <div class="content">
-                        <!-- <span class="subtitle">2007 - 2010</span> -->
-                        <h4 class="maintitle">Company Interviews</h4>
-                        <div class="experience-list">
-                          <!-- Start Single List  -->
-
-                          <!-- End Single List  -->
-
-                          <!-- Start Single List  -->
-
-                          <!-- End Single List  -->
-
-                          <!-- Start Single List  -->
-
-                          <!-- End Single List  -->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- End Skill List Area  -->
-
-                    <!-- Start Skill List Area 2nd  -->
-
-                    <!-- End Skill List Area  -->
-                  </div>
-                </div>
-              </div>
-              <!-- End Single Tab  -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="rn-contact-area rn-section-gap section-separator" id="contacts">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="section-title text-center">
-              <span class="subtitle">Contact</span>
-              <h2 class="title">Contact With Me</h2>
-            </div>
-          </div>
-        </div>
-
-        <div class="row mt--50 mt_md--40 mt_sm--40 mt-contact-sm">
-          <div class="col-lg-8 container">
-            <div class="contact-about-area">
-              <div class="thumbnail">
-                <img src="public/images/contact/contact1.png" alt="contact-img" />
-              </div>
-              <div class="title-area">
-                <h4 class="title">Agbo Emmanuel ThankGod</h4>
-                <span>Backend Developer</span>
-              </div>
-              <div class="description">
-                <p>
-                  I am available. Connect with me via email, Whatsapp,Linkedin, or call in to my
-                  account.
-                </p>
-                <span class="phone">Phone: <a href="https://wa.link/exmv4k" target='_blank'>07085427519</a></span>
-                <span class="mail">Email:
-                  <a href="mailto:agboemmanuel002@gmail.com" target='_blank'>agboemmanuel002@gmail.com</a></span>
-                <span class="mail">Linkedin:
-                  <a href="https://www.linkedin.com/in/emmanuel-agbo-906732231" target='_blank'>Emmanuel Agbo</a></span>
-                <span class="mail">Github:
-                  <a href="http://github.com/scarface1129" target='_blank'>scarface1129</a></span>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!-- End Contuct section -->
-    <!-- Modal Portfolio Body area Start -->
-
-    <!-- End Modal Portfolio area -->
-    <!-- Modal Blog Body area Start -->
-    <div class="modal fade" id="exampleModalCenters" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered modal-news" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                  stroke-linejoin="round" class="feather feather-x">
-                  <line x1="18" y1="6" x2="6" y2="18"></line>
-                  <line x1="6" y1="6" x2="18" y2="18"></line>
-                </svg></span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Modal Blog area -->
-    <!-- Back to  top Start -->
-    <div class="backto-top" style="opacity: 1">
-      <div>
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="feather feather-arrow-up">
-          <line x1="12" y1="19" x2="12" y2="5"></line>
-          <polyline points="5 12 12 5 19 12"></polyline>
-        </svg>
-      </div>
-    </div>
-    <!-- Back to top end -->
-    <!-- Start Right Demo  -->
-  </main>
-  <!-- Start Footer Area -->
-  <div class="rn-footer-area rn-section-gap section-separator">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="footer-area text-center">
-            <p class="description mt--30">
-              ©
-              <script>document.write(new Date().getFullYear());</script>. All rights reserved by
-              <a target="_blank" href="">Agbo Emmannuel ThankGod.</a>
+              ✅ Code that runs.
+              ✅ Copy that resonates.
             </p>
+            <div class="row">
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+2347085427519</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Lagos, Nigeria</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BSc Computer Science</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-lg-6">
+                <ul>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>agboemmanuel002@gmail.com</span>
+                  </li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
+
+      </div>
+
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-emoji-smile"></i>
+              <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Happy Clients</strong></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-journal-richtext"></i>
+              <span data-purecounter-start="0" data-purecounter-end="8" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Projects</strong></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-headset"></i>
+              <span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Hours Of Support</strong></p>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Certifications</strong> </p>
+            </div>
+          </div>
+          <!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Skills</h2>
+        <p>Proficient in modern web technologies and frameworks. Experienced in backend development, API integration,
+          and crafting user-focused solutions with clean, maintainable code.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row skills-content skills-animation">
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>Laravel (PHP)</span> <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"><span>RESTful API Development</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"><span>Payment Gateway Integration</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-6">
+
+            <div class="progress">
+              <span class="skill"><span>MySQL/PostgreSQL</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"><span>Technical Writing / Documentation</span> <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"><span>Git & Version Control</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="col-lg-12 mt-4">
+            <h5 class="mb-3">Soft Skills</h5>
+
+            <div class="progress">
+              <span class="skill"><span>Technical Communication</span> <i class="val">95%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"><span>Problem Solving</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"><span>Collaboration & Teamwork</span> <i class="val">90%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"><span>Attention to Detail</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+            <div class="progress">
+              <span class="skill"><span>Adaptability</span> <i class="val">85%</i></span>
+              <div class="progress-bar-wrap">
+                <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </section><!-- /Skills Section -->
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Backend systems that scale. APIs that flow. Copy that converts.
+          A results-driven Laravel Backend Developer & Tech Copywriter with 4+ years of experience building scalable
+          systems and crafting clear, conversion-focused technical content.</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Sumary</h3>
+
+            <div class="resume-item pb-0">
+              <h4>Emmanuel</h4>
+              <p><em>Innovative and detail-oriented Backend Developer with 4+ years of experience engineering secure,
+                  scalable Laravel applications and writing developer-focused copy that simplifies complex ideas, drives
+                  adoption, and converts users. Expert in backend architecture, payment integration across African
+                  markets, and technical storytelling for dev teams and stakeholders alike.</em></p>
+              <ul>
+                <li>Lagos, Nigeria</li>
+                <li>(+234)7085427519</li>
+                <li>agboemmanuel002@gmail.com</li>
+              </ul>
+            </div><!-- Edn Resume Item -->
+
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>BSc Computer Science</h4>
+              <h5>2018 - 2023</h5>
+              <p><em>Nnamdi Azikiwe University — GPA: 3.82 / 5.0 </em></p>
+              <p>Graduated with second-class upper honors, with a strong focus on software engineering, algorithms, and
+                systems
+                design. Built a solid foundation in computer science principles while actively working on real-world
+                Laravel backend projects and contributing to open-source tools during school years.</p>
+            </div><!-- Edn Resume Item -->
+
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="resume-title">Professional Experience</h3>
+
+            <div class="resume-item">
+              <h4>Backend Laravel Developer (Contract - Remote)</h4>
+              <h5>Apr 2023 – Present</h5>
+              <p><em>Mksk Consulting, London, UK</em></p>
+              <ul>
+                <li>Led a team of 4 in building and maintaining 3 enterprise Laravel applications.</li>
+                <li>Streamlined API logic and integrated secure third-party APIs, reducing latency by 35%.</li>
+                <li>Optimized MySQL performance through query tuning and indexing.</li>
+                <li>Enhanced project collaboration using Git best practices and agile workflows.</li>
+              </ul>
+            </div>
+
+
+            <div class="resume-item">
+              <h4>Lead Backend Developer (Remote)</h4>
+              <h5>Feb 2024 – May 2025</h5>
+              <p><em>Syticks Technologies, Port Harcourt, Nigeria</em></p>
+              <ul>
+                <li>Led the backend team in building scalable Laravel applications for enterprise clients.</li>
+                <li>Designed secure and efficient RESTful APIs to support mobile and web platforms.</li>
+                <li>Integrated payment gateways (Paystack, Monnify, Flutterwave, Bloq, Fincra) with enhanced transaction
+                  tracking.</li>
+                <li>Improved system performance using Redis caching and Laravel Queues.</li>
+                <li>Collaborated cross-functionally, mentored junior developers, and enforced clean code practices.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>NYSC Developer (C#/.NET)</h4>
+              <h5>Feb 2024 – Jan 2025</h5>
+              <p><em>Alpha Beta Consulting</em></p>
+              <ul>
+                <li>Built internal tools using C# and .NET framework during NYSC year.</li>
+                <li>Assisted in modernizing legacy systems and integrating backend services.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Backend Laravel Developer (Remote)</h4>
+              <h5>Jan 2022 – Apr 2023</h5>
+              <p><em>Swizel.co, Abuja, Nigeria</em></p>
+              <ul>
+                <li>Improved API performance by 30% for over 2,000 daily users through backend optimization.</li>
+                <li>Built scalable, maintainable infrastructure and collaborated with UX/frontend teams.</li>
+                <li>Consistently wrote clean, reusable code and participated in regular code reviews.</li>
+              </ul>
+            </div>
+
+            <div class="resume-item">
+              <h4>Backend Web Developer (On-site)</h4>
+              <h5>Jan 2021 – Feb 2022</h5>
+              <p><em>IcezTech IT Company, Awka, Nigeria</em></p>
+              <ul>
+                <li>Developed and deployed web applications tailored to client requirements.</li>
+                <li>Managed deployments, presented demos, and ensured client satisfaction.</li>
+                <li>Kept up-to-date with new web technologies to improve team output and delivery.</li>
+              </ul>
+            </div>
+
+
+
+            <div class="resume-item">
+              <h4>Intern – Software Developer</h4>
+              <h5>Sep 2021 – Feb 2022</h5>
+              <p><em>TechoCraft IT, Enugu, Nigeria</em></p>
+              <ul>
+                <li>Supported senior devs with Laravel backend tasks and database management.</li>
+                <li>Learned hands-on techniques in real-world development environments.</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Resume Section -->
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio section light-background">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Portfolio</h2>
+        <p>Each project below is a story of collaboration, growth, and passion for building solutions that make a
+          difference. I’m proud to share these milestones—crafted with care, curiosity, and a commitment to excellence.
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">All</li>
+            <li data-filter=".filter-app">Web Applications</li>
+            <li data-filter=".filter-copies">Copies</li>
+            <li data-filter=".filter-blogs">Blogs</li>
+            <!-- <li data-filter=".filter-books">Books</li> -->
+          </ul><!-- End Portfolio Filters -->
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/businessdesk.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>BusinessDesk.Ng</h4>
+                  <p style="font-size: small;">A dynamic platform for CAC business registration and related services in
+                    Nigeria.</p>
+                  <a href="assets/img/portfolio/businessdesk.png" title="BusinessDesk.Ng"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/syticks.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Syticks</h4>
+                  <p style="font-size: small;">An Online Ticketing System.</p>
+                  <a href="assets/img/portfolio/syticks.png" title="Syticks.com" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/rechargeprofit.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>RechargeProfit</h4>
+                  <p style="font-size: small;">A website for Airtime, Data, Cable Tv, and Electricity bill payment.</p>
+                  <a href="assets/img/portfolio/rechargeprofit.png" title="rechargeprofit.com"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/fusion_api.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Fusion Api</h4>
+                  <p style="font-size: small;">An enterprise Tool, designed to manage employee attendance, work
+                    schedules, and HR operations efficiently</p>
+                  <a href="assets/img/portfolio/fusion_api.png" title="fusion_api" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/tellasport.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>TellaSport</h4>
+                  <p style="font-size: small;">A website for converting sport betting codes from
+                    one bookie to another</p>
+                  <a href="assets/img/portfolio/tellasport.png" title="tellasport.com"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/betslipswitch.png" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>BetslipSwitch</h4>
+                  <p style="font-size: small;">A website for converting sport betting codes from
+                    one bookie to another</p>
+                  <a href="assets/img/portfolio/betslipswitch.png" title="betslipswitch.com"
+                    data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-copies">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/product-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Product 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/product-1.jpg" title="Product 1"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-blogs">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/branding-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Branding 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/branding-1.jpg" title="Branding 1"
+                    data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Books 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="assets/img/portfolio/books-1.jpg" title="Branding 1" data-gallery="portfolio-gallery-book"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div> -->
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-copies">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Copy</h4>
+                  <p>COMING SOON</p>
+                  <!-- <a href="assets/img/portfolio/books-1.jpg" title="App 2" data-gallery="portfolio-gallery-app"
+                    class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a> -->
+                  <!-- <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-blogs">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/portfolio/books-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Blog Post</h4>
+                  <p>COMING SOON</p>
+                  <!-- <a href="assets/img/portfolio/books-3.jpg" title="Product 2"
+                    data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
+                      class="bi bi-zoom-in"></i></a> -->
+                  <!-- <a href="javascript:void(0);" title="More Details" class="details-link"><i
+                      class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+            </div>
+          </div><!-- End Portfolio Container -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p>
+          I offer backend development, API integration, payment gateway solutions, and technical writing services. My
+          focus is on building robust Laravel applications, streamlining business processes, and delivering clear,
+          user-friendly documentation to help your projects succeed.
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+            <div>
+              <h4 class="title"><a href="javascript:void(0);" class="stretched-link">Backend Development (Laravel)</a>
+              </h4>
+              <p class="description">Secure. Performant. Cleanly architected.
+                I build robust Laravel systems with layered architecture, queues, Redis caching, and multi-environment
+                deployment strategies.</p>
+            </div>
+          </div>
+          <!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
+            <div>
+              <h4 class="title"><a href="javascript:void(0);" class="stretched-link">API Development & Payment
+                  Solutions</a></h4>
+              <p class="description">Custom APIs. Seamless Transactions. African & Global Reach.
+                From scratch-built APIs to complete payment infrastructures — I develop and implement secure endpoints,
+                and integrate providers like Paystack, Monnify, Flutterwave, Fincra, and Bloq. Expect real-time
+                reliability and scale.
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
+            <div>
+              <h4 class="title"><a href="javascript:void(0);" class="stretched-link">Copywriting (Tech & General)</a>
+              </h4>
+              <p class="description">Your product deserves the right words.
+                From developer documentation to landing pages, microcopy, or investor decks — I write with clarity and
+                intent. Whether it's technical or promotional, I make your message land with users, customers, and
+                stakeholders alike.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon flex-shrink-0"><i class="bi bi-binoculars"></i></div>
+            <div>
+              <h4 class="title"><a href="javascript:void(0);" class="stretched-link">System Design & Technical
+                  Consulting</a></h4>
+              <p class="description">Architect your backend the smart way.
+                Need a Laravel expert to design a new system or untangle an old one? I help teams plan clean, scalable
+                solutions — from database modeling to long-term maintainability.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+    <!-- Testimonials Section -->
+    <!-- <section id="testimonials" class="testimonials section light-background">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
+                    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid malis quorum
+                    velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis
+                    minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat dolor enim
+                    duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <p>
+                  <i class="bi bi-quote quote-icon-left"></i>
+                  <span>Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam sunt
+                    culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.</span>
+                  <i class="bi bi-quote quote-icon-right"></i>
+                </p>
+                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section> -->
+    <!-- /Testimonials Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+        <p>
+          Ready to collaborate or have a project in mind? I’m always open to discussing new opportunities, technical
+          challenges, or creative ideas. Reach out using the form below or connect via email or phone—I’ll respond
+          promptly!
+        </p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-12">
+
+            <div class="info-wrap">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="info-item d-flex flex-column align-items-center text-center" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <i class="bi bi-geo-alt flex-shrink-0 mb-2"></i>
+                    <div>
+                      <h3>Address</h3>
+                      <p>Lagos, Nigeria</p>
+                    </div>
+                  </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-md-4">
+                  <div class="info-item d-flex flex-column align-items-center text-center" data-aos="fade-up"
+                    data-aos-delay="300">
+                    <i class="bi bi-telephone flex-shrink-0 mb-2"></i>
+                    <div>
+                      <h3>Call Us</h3>
+                      <p>+2347085427519</p>
+                    </div>
+                  </div>
+                </div><!-- End Info Item -->
+
+                <div class="col-md-4">
+                  <div class="info-item d-flex flex-column align-items-center text-center" data-aos="fade-up"
+                    data-aos-delay="400">
+                    <i class="bi bi-envelope flex-shrink-0 mb-2"></i>
+                    <div>
+                      <h3>Email Us</h3>
+                      <p>agboemmanuel002@gmail.com</p>
+                    </div>
+                  </div>
+                </div><!-- End Info Item -->
+              </div>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div> -->
+          <!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Emmanuel</strong> <span>All Rights Reserved</span>
+        </p>
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
+          href="https://themewagon.com">ThemeWagon</a>
       </div>
     </div>
-  </div>
 
-  <!-- End Footer Area -->
-  <!-- JS ============================================ -->
-  <script src="public/js/vendor/jquery.js"></script>
-  <script>
-    $(function () {
-      setTimeout(function () {
-        $(".handle").fadeOut(1500);
-      }, 2500);
-    });
-  </script>
-  <script src="public/js/vendor/modernizer.min.js"></script>
-  <script src="public/js/vendor/feather.min.js"></script>
-  <script src="public/js/vendor/slick.min.js"></script>
-  <script src="public/js/vendor/bootstrap.js"></script>
-  <script src="public/js/vendor/text-type.js"></script>
-  <script src="public/js/vendor/wow.js"></script>
-  <script src="public/js/vendor/aos.js"></script>
-  <script src="public/js/vendor/particles.js"></script>
-  <script src="public/js/vendor/jquery-one-page-nav.js"></script>
-  <!-- main JS -->
-  <script src="public/js/main.js"></script>
+  </footer>
 
-  <quillbot-extension-portal></quillbot-extension-portal>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
 </body>
-<quillbot-extension-root></quillbot-extension-root><grammarly-desktop-integration
-  data-grammarly-shadow-root="true"></grammarly-desktop-integration>
 
 </html>
